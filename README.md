@@ -1,5 +1,5 @@
-# <div align="center">![AICV Logo](https://img.shields.io/badge/AICV-Mobile-blue?style=for-the-badge&logo=android&logoColor=white&labelColor=black&color=00b4d8)</div>
-# <div align="center">🔍 Real-time Android Object Detection App</div>
+# <div align="center">🔍 AICV-Mobile 📱</div>
+# <div align="center">🔍 智能视觉跟踪系统 | 安卓端实时目标检测 (目前仅支持小米机型)</div>
 
 <div align="center">
 
@@ -16,26 +16,26 @@
 </div>
 
 <div align="center">
-<b>👨‍💻 Author:</b> <a href="https://github.com/dmwzw">dmwzw</a>
-<b>📱 Download:</b> <a href="https://github.com/dmwzw/AICV-Mobile/releases/tag/AI">AICV-Mobile-V1.0 (Pre-release)</a>
+<b>👨‍💻 作者:</b> <a href="https://github.com/dmwzw">dmwzw</a>
+<b>📱 下载:</b> <a href="https://github.com/dmwzw/AICV-Mobile/releases/tag/AI">AICV-Mobile-V1.0 (Pre-release)</a>
 </div>
 
-
 <div align="center">
-<h3>📊 Real-time Performance | 🔍 Precise Detection | 🎯 Object Tracking | 📱 Mobile Optimized</h3>
+<h3>📊 实时性能 | 🔍 精准检测 | 🎯 目标跟踪 | 📱 移动优化</h3>
 </div>
 
 ---
 
-## <img src="https://img.shields.io/badge/-%F0%9F%9A%80%20Introduction-blue?style=for-the-badge&labelColor=black"/> 
+## <img src="https://img.shields.io/badge/-%F0%9F%9A%80%20%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B-blue?style=for-the-badge&labelColor=black"/> 
 
-> ***AICV-Mobile*** is a **mobile computer vision application** based on YOLOv8 and an improved OC-SORT algorithm, designed and optimized for the Android platform. This project implements efficient object detection, instance segmentation, and object tracking, including mask (segmentation) tracking to follow the shape changes of targets in real-time.
+> ***AICV-Mobile*** 是一个**移动端计算机视觉应用**，基于YOLOv8和改进版OC-SORT算法，专为Android平台设计和优化。本项目实现了高效的目标检测、实例分割及目标跟踪功能，并支持掩码（分割）跟踪，能够实时跟踪目标的形状变化。
 
 <details>
 <summary><b>📑 目录 (Table of Contents)</b></summary>
 
 - [项目简介](#-项目简介)
 - [功能特点](#-功能特点-)
+- [应用场景](#-应用场景-)
 - [效果演示](#-效果演示-)
 - [技术实现](#️-技术实现-)
   - [目标跟踪机理](#目标跟踪机理)
@@ -105,6 +105,37 @@
   <tr>
     <td>🔄 <b>模式切换</b></td>
     <td>支持多种工作模式的实时切换：手持模式、稳定模式、多种运动模式和空间分布模式</td>
+  </tr>
+</table>
+</div>
+
+## <img src="https://img.shields.io/badge/-%F0%9F%9A%A9%20%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-teal?style=for-the-badge&labelColor=black"/>
+
+<div align="center">
+<table>
+  <tr>
+    <th align="center">📚 场景</th>
+    <th align="center">🔍 应用前景</th>
+  </tr>
+  <tr>
+    <td>⦿ <b>教育培训领域</b></td>
+    <td>这是最直接的应用场景。现在CV课程普遍偏理论，学生难以建立直观认识。AICV-Mobile让学生通过手机就能进行参数调优实验，观察算法行为，理解理论概念。未来可以看到更多高校将其纳入教学工具箱，开发配套教材和实验指南。</td>
+  </tr>
+  <tr>
+    <td>⦿ <b>开发原型验证</b></td>
+    <td>对于想要在产品中融入CV功能的开发者，最大挑战是确定参数配置。现在，他们可以在实际场景中测试不同参数组合，找到最佳配置后再集成到产品中。这大大缩短了开发周期，提高了成功率。</td>
+  </tr>
+  <tr>
+    <td>⦿ <b>行业定制应用</b></td>
+    <td>想象一下，安防公司可以基于这个平台开发专用版本，为安装人员提供现场调试工具；零售企业可以针对客流分析优化参数；交通部门可以针对车辆检测和追踪进行场景适配。未来将看到更多行业定制版本出现。</td>
+  </tr>
+  <tr>
+    <td>⦿ <b>快速可视化验证</b></td>
+    <td>还在实验室熬夜调参数？论文参数落地就翻车？玄学NMS调到怀疑人生？AICV-Mobile提供参数接口，支持各种参数的快速验证，让您直观看到参数变化带来的效果。</td>
+  </tr>
+  <tr>
+    <td>⦿ <b>AI科普与体验</b></td>
+    <td>对于普通大众，AI仍然是个黑盒。AICV-Mobile提供了一个窗口，让人们直观体验AI视觉能力，理解它的工作原理和局限性。未来可以成为AI科普教育的重要工具。</td>
   </tr>
 </table>
 </div>
@@ -182,7 +213,7 @@
   </tr>
   <tr>
     <td align="center"><b>步骤 2</b></td>
-    <td><b>关联阶段</b>：计算预测位置与当前帧检测结果之间的关联代价（综合IoU、距离等），并使用匈牙利算法或贪婪算法进行匹配。</td>
+    <td><b>关联阶段</b>：计算预测位置与当前帧检测结果之间的关联代价（综合IoU、距离等），并使用匈牙利算法进行匹配。</td>
   </tr>
   <tr>
     <td align="center"><b>步骤 3</b></td>
@@ -194,7 +225,6 @@
   </tr>
 </table>
 
-### <img src="https://img.shields.io/badge/-掩码跟踪机理-FF5733?style=flat-square&logoColor=white"/> 
 
 <div class="code-block" style="background-color: #f6f8fa; border-left: 3px solid #FF5733; padding: 1em; margin: 1em 0;">
 <ol>
@@ -460,7 +490,7 @@ app/src/main/
 ## <img src="https://img.shields.io/badge/-%F0%9F%93%9C%20%E8%AE%B8%E5%8F%AF%E8%AF%81-yellow?style=for-the-badge&labelColor=black"/>
 
 <div align="center">
-  <p>本项目采用 <a href="https://opensource.org/licenses/MIT">MIT 许可证</a> - 详情请参见 <code>LICENSE</code> 文件（如果存在）。</p>
+  <p>本项目采用 <a href="https://opensource.org/licenses/MIT">MIT 许可证</a> </p>
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="MIT License"/>
 </div>
 
@@ -517,4 +547,412 @@ app/src/main/
   <h6>Made with ❤️ by dmwzw</h6>
 </div>
 
+---
 
+# <div align="center">🔍 AICV-Mobile 📱</div>
+# <div align="center">🔍 智能视觉跟踪系统 | 安卓端实时目标检测</div>
+
+<div align="center">
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/dmwzw/AICV-Mobile?style=flat-square&logo=github)](https://github.com/dmwzw/AICV-Mobile/stargazers)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square&logo=git)](CONTRIBUTING.md)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-00FFFF?style=flat-square&logo=yolo&logoColor=black)
+![NCNN](https://img.shields.io/badge/NCNN-4B32C3?style=flat-square)
+![OpenCV](https://img.shields.io/badge/OpenCV-%23white.svg?style=flat-square&logo=opencv&logoColor=white)
+![AI](https://img.shields.io/badge/Computer_Vision-AI-FF5733?style=flat-square&logo=tensorflow&logoColor=white)
+
+</div>
+
+<div align="center">
+<b>👨‍💻 作者:</b> <a href="https://github.com/dmwzw">dmwzw</a> (<a href="mailto:zweicumt@163.com">zweicumt@163.com</a>)<br>
+<b>📱 下载:</b> <a href="https://github.com/dmwzw/AICV-Mobile/releases/tag/AI">AICV-Mobile-V1.0 (Pre-release)</a>
+</div>
+
+<p align="center">
+  <img src="https://github.com/dmwzw/AICV-Mobile/raw/main/app/demo/banner.jpg" alt="AICV-Mobile Banner" width="800"/>
+</p>
+
+<div align="center">
+<h3>📊 实时性能 | 🔍 精准检测 | 🎯 目标跟踪 | 📱 移动优化</h3>
+</div>
+
+---
+
+## 🚀 Introduction
+
+AICV-Mobile is a **mobile computer vision application** based on YOLOv8 and an improved OC-SORT algorithm, designed and optimized for the Android platform. This project implements efficient object detection, instance segmentation, and object tracking, including mask (segmentation) tracking to follow the shape changes of targets in real-time.
+
+<details>
+<summary><b>📑 Table of Contents</b></summary>
+
+- [Introduction](#-introduction)
+- [Features](#-features-)
+- [Application Scenarios](#-application-scenarios-)
+- [Demo Video](#-demo-video-)
+- [Technical Implementation](#️-technical-implementation-)
+  - [Object Tracking Mechanism](#object-tracking-mechanism)
+  - [Mask Tracking Mechanism](#mask-tracking-mechanism)
+  - [Error Handling](#error-handling)
+- [System Requirements](#-system-requirements-)
+- [Compilation and Installation](#️-compilation-and-installation-)
+  - [Prerequisites](#prerequisites)
+  - [Compilation Steps](#compilation-steps)
+- [Usage Guide](#-usage-guide-)
+  - [Basic Usage](#basic-usage)
+  - [Settings Options](#settings-options)
+- [Code Structure](#-code-structure-)
+  - [Key Components C++](#key-components-c)
+- [Contribution Guidelines](#-contribution-guidelines-)
+- [License](#-license-)
+- [Acknowledgements](#-acknowledgements-)
+- [Contact](#-contact-)
+- [中文版本](#-aicv-mobile-)
+
+</details>
+
+## ✨ Features ✨
+
+<table>
+  <tr>
+    <td>🔍 <b>Efficient Object Detection</b></td>
+    <td>Based on the YOLOv8 model, supports detection of 80 common object classes from the COCO dataset</td>
+  </tr>
+  <tr>
+    <td>🎨 <b>Instance Segmentation</b></td>
+    <td>Supports precise object segmentation to generate high-quality masks</td>
+  </tr>
+  <tr>
+    <td>🎯 <b>Object Tracking</b></td>
+    <td>Implements an improved OC-SORT algorithm combined with a Kalman filter for enhanced tracking accuracy</td>
+  </tr>
+  <tr>
+    <td>🎭 <b>Mask Tracking</b></td>
+    <td>Capable of tracking target shape changes, supporting mask prediction and temporal smoothing</td>
+  </tr>
+  <tr>
+    <td>🌈 <b>Diverse Display Styles</b></td>
+    <td>Supports various display styles for bounding boxes, masks, and trajectories</td>
+  </tr>
+  <tr>
+    <td>📈 <b>Trajectory Visualization</b></td>
+    <td>Can display the motion paths of targets</td>
+  </tr>
+  <tr>
+    <td>⚡ <b>Performance Optimization</b></td>
+    <td>Optimized for mobile devices, including disabling C++ exception handling</td>
+  </tr>
+  <tr>
+    <td>🚄 <b>Real-time Performance</b></td>
+    <td>m-model achieves 10-20 FPS, while n-model can exceed 30 FPS</td>
+  </tr>
+  <tr>
+    <td>🔎 <b>Category Filtering</b></td>
+    <td>Support for enabling/disabling detection of specific object categories as needed</td>
+  </tr>
+  <tr>
+    <td>🔄 <b>Mode Switching</b></td>
+    <td>Real-time switching between multiple working modes: Handheld Mode, Stable Mode, various Motion Modes and Spatial Distribution Mode</td>
+  </tr>
+</table>
+
+## 🎬 Demo Video 🎬
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>Demo 1</b></td>
+      <td align="center"><b>Demo 2</b></td>
+    </tr>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/dmwzw/AICV-Mobile/raw/main/app/demo/1.mp4">
+          <img src="app/demo/1.jpg" width="100%" />
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/dmwzw/AICV-Mobile/raw/main/app/demo/2.mp4">
+          <img src="app/demo/2.jpg" width="100%" />
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center"><b>Demo 3</b></td>
+      <td align="center"><b>Demo 4</b></td>
+    </tr>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/dmwzw/AICV-Mobile/raw/main/app/demo/3.mp4">
+          <img src="app/demo/3.jpg" width="100%" />
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/dmwzw/AICV-Mobile/raw/main/app/demo/4.mp4">
+          <img src="app/demo/4.jpg" width="100%" />
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div align="center"><i>Click the images to view the corresponding demo videos</i></div>
+
+## ⚙️ Technical Implementation ⚙️
+
+### Object Tracking Mechanism
+
+<div align="center">
+  <img src="https://github.com/dmwzw/AICV-Mobile/raw/main/app/demo/tracking_mechanism.png" alt="Tracking Mechanism" width="600"/>
+</div>
+
+This project utilizes concepts from the improved OC-SORT (Observation-Centric SORT) algorithm combined with a Kalman Filter for target tracking, enhancing accuracy and robustness:
+
+1.  **Prediction Stage**: Uses the Kalman filter to predict the next state (position, velocity, etc.) of each tracked object.
+2.  **Association Stage**: Calculates the association cost (combining IoU, distance, etc.) between predicted locations and current frame detections, using algorithms like Hungarian or greedy matching.
+3.  **Update Stage**: Updates the Kalman filter state of matched tracked objects using the corresponding successful detections.
+4.  **Lifecycle Management**: Handles unmatched detections (creating new tracks) and unmatched tracks (marking as lost, deleting timed-out tracks).
+
+### Mask Tracking Mechanism
+
+1.  **Mask History**: Each tracked object maintains a history of masks from recent frames.
+2.  **Mask Prediction**: When a target is lost (detection fails) but tracking is maintained, the previous frame's mask is transformed based on motion prediction (e.g., using affine transformation `warpAffine`).
+3.  **Mask Smoothing**: Uses temporal weighted averaging to reduce mask jitter.
+
+### Error Handling
+
+As C++ exception handling is disabled for performance, a multi-layered error handling strategy is employed, including preventative checks, fault tolerance mechanisms, and logging.
+
+## 📱 System Requirements 📱
+
+<table>
+  <tr>
+    <td width="200"><b>Operating System</b></td>
+    <td>Android 6.0 (API 23) or higher</td>
+  </tr>
+  <tr>
+    <td><b>Processor Architecture</b></td>
+    <td>ARMv8 (arm64-v8a)</td>
+  </tr>
+  <tr>
+    <td><b>Device Requirements</b></td>
+    <td>Device with a camera</td>
+  </tr>
+  <tr>
+    <td><b>Memory</b></td>
+    <td>At least 2GB RAM</td>
+  </tr>
+</table>
+
+## 🚩 Application Scenarios 🚩
+
+<div align="center">
+<table>
+  <tr>
+    <th align="center">📚 Scenario</th>
+    <th align="center">🔍 Application Prospects</th>
+  </tr>
+  <tr>
+    <td>⦿ <b>Education & Training</b></td>
+    <td>This is the most direct application scenario. Current CV courses are generally theoretical, making it difficult for students to build intuitive understanding. AICV-Mobile allows students to conduct parameter optimization experiments on their phones, observe algorithm behavior, and understand theoretical concepts. More universities are expected to incorporate it into their teaching toolkits, developing supporting materials and experimental guides.</td>
+  </tr>
+  <tr>
+    <td>⦿ <b>Development Prototype Verification</b></td>
+    <td>For developers looking to incorporate CV functionality into their products, the biggest challenge is determining parameter configurations. Now, they can test different parameter combinations in real-world scenarios, find the optimal configuration, and then integrate it into their products. This significantly shortens the development cycle and improves success rates.</td>
+  </tr>
+  <tr>
+    <td>⦿ <b>Industry-Specific Applications</b></td>
+    <td>Security companies can develop specialized versions based on this platform to provide installation personnel with on-site debugging tools; retail enterprises can optimize parameters for customer flow analysis; transportation departments can adapt scenarios for vehicle detection and tracking. More industry-customized versions are expected to emerge in the future.</td>
+  </tr>
+  <tr>
+    <td>⦿ <b>Quick Visual Verification</b></td>
+    <td>Still staying up late in the lab tweaking parameters? Research parameters fail when deployed? Mystical NMS tuning driving you crazy? AICV-Mobile provides parameter interfaces that support quick verification of various parameters, allowing you to intuitively see the effects of parameter changes.</td>
+  </tr>
+  <tr>
+    <td>⦿ <b>AI Education & Experience</b></td>
+    <td>For the general public, AI remains a black box. AICV-Mobile provides a window for people to intuitively experience AI vision capabilities, understand its working principles and limitations. It can become an important tool for AI science education in the future.</td>
+  </tr>
+</table>
+</div>
+
+## 🛠️ Compilation and Installation 🛠️
+
+### Prerequisites
+
+<table>
+  <tr>
+    <td width="200"><b>Development Environment</b></td>
+    <td>Android Studio 4.0+</td>
+  </tr>
+  <tr>
+    <td><b>NDK</b></td>
+    <td>r21+</td>
+  </tr>
+  <tr>
+    <td><b>CMake</b></td>
+    <td>3.18+</td>
+  </tr>
+  <tr>
+    <td><b>OpenCV</b></td>
+    <td>Mobile 4.6.0</td>
+  </tr>
+  <tr>
+    <td><b>NCNN</b></td>
+    <td>20230223+</td>
+  </tr>
+</table>
+
+### Compilation Steps
+
+<ol>
+  <li>
+    <b>Clone the repository</b>
+    <pre><code>git clone https://github.com/your-username/AICV-Mobile.git
+cd AICV-Mobile</code></pre>
+  </li>
+  <li><b>Open the project in Android Studio</b></li>
+  <li><b>Sync Gradle files</b></li>
+  <li>
+    <b>Compile and install on the device</b>
+    <pre><code>./gradlew assembleDebug
+adb install -r app/build/outputs/apk/debug/app-debug.apk</code></pre>
+  </li>
+</ol>
+
+## 📖 Usage Guide 📖
+
+### Basic Usage
+
+1.  Launch the application, grant camera permissions.
+2.  Point the camera at the objects to be detected.
+3.  The application will automatically perform detection and tracking, displaying bounding boxes, labels, confidence scores, tracking IDs, and trajectories (if enabled).
+
+### Settings Options
+
+<table>
+  <tr>
+    <td width="200"><b>Detection/Display Style</b></td>
+    <td>Choose display styles for bounding boxes, text, masks, and trajectories</td>
+  </tr>
+  <tr>
+    <td><b>Mask Threshold</b></td>
+    <td>Adjust the threshold for segmentation masks</td>
+  </tr>
+  <tr>
+    <td><b>Enable/Disable Tracking</b></td>
+    <td>Perform detection only</td>
+  </tr>
+  <tr>
+    <td><b>Enable/Disable Mask Tracking</b></td>
+    <td>Control whether to track masks</td>
+  </tr>
+  <tr>
+    <td><b>Enable/Disable Trajectory Display</b></td>
+    <td>Configure trajectory length and style</td>
+  </tr>
+  <tr>
+    <td><b>Category Filtering</b></td>
+    <td>Option to enable or disable detection of specific categories (e.g., person, vehicle, animal)</td>
+  </tr>
+  <tr>
+    <td><b>Working Mode</b></td>
+    <td>Switch between detection-only mode, detection+tracking mode, segmentation+tracking mode, etc.</td>
+  </tr>
+  <tr>
+    <td><b>Tracking Mode Selection</b></td>
+    <td>Choose tracking strategies based on scenarios: Handheld Mode (for moving camera), Stable Mode (for fixed camera), Motion Modes (for high-speed targets), Spatial Distribution Mode (optimized for dense target scenarios)</td>
+  </tr>
+</table>
+
+## 📁 Code Structure 📁
+
+```
+app/src/main/
+├── java/                # Java code (UI, Camera Interaction, Settings Management)
+│   ├── com/gyq/        # Main package
+│   └── ylov/colorpicker# Color picker component
+├── jni/                # C++ code (Core algorithms)
+│   ├── yolo.cpp        # YOLO detection implementation
+│   ├── yolo.h          # YOLO class definition
+│   ├── yolov8ncnn.cpp  # JNI interface implementation
+│   ├── EnhancedTracker.h # Enhanced tracker (integrating OC-SORT ideas + Kalman)
+│   ├── OCsort.h        # Basic OC-SORT implementation (potentially for reference or partial use)
+│   ├── Object.h        # Detection/Tracking object structure definition
+│   ├── TrackingParams.h # Tracking parameters definition
+│   ├── ndkcamera.cpp   # Camera interface implementation (C++)
+│   └── ndkcamera.h     # Camera interface definition (C++)
+└── assets/             # Model files directory (YOLO models *.bin/*.param)
+```
+
+### Key Components (C++)
+
+<table>
+  <tr>
+    <td width="200"><code>Yolo</code> Class</td>
+    <td>Responsible for model loading, inference, post-processing, and drawing results</td>
+  </tr>
+  <tr>
+    <td><code>OCSort</code> Class</td>
+    <td>Implements the basic OC-SORT algorithm</td>
+  </tr>
+  <tr>
+    <td><code>EnhancedTracking</code> Class</td>
+    <td>Enhanced tracker integrating Kalman filter and OC-SORT concepts, supporting mask tracking</td>
+  </tr>
+  <tr>
+    <td><code>TrackingParams</code> Struct</td>
+    <td>Defines tracking parameters</td>
+  </tr>
+  <tr>
+    <td><code>Object</code> Struct</td>
+    <td>Represents detected and tracked target objects</td>
+  </tr>
+</table>
+
+## 🙌 Contribution Guidelines 🙌
+
+<ol>
+  <li>Fork the project</li>
+  <li>Create a feature branch (<code>git checkout -b feature/amazing-feature</code>)</li>
+  <li>Commit your changes (<code>git commit -m 'Add some amazing feature'</code>)</li>
+  <li>Push to the branch (<code>git push origin feature/amazing-feature</code>)</li>
+  <li>Create a Pull Request</li>
+</ol>
+
+## 📜 License 📜
+
+This project is licensed under the MIT License.
+
+## 🙏 Acknowledgements 🙏
+
+<table>
+  <tr>
+    <td><a href="https://github.com/ultralytics/ultralytics">YOLO / Ultralytics</a></td>
+    <td>Providing efficient object detection models</td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/abs/2203.14360">OC-SORT Paper / Authors</a></td>
+    <td>Providing advanced tracking algorithm concepts</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/Tencent/ncnn">NCNN / Tencent</a></td>
+    <td>High-performance neural network inference framework</td>
+  </tr>
+  <tr>
+    <td><a href="https://opencv.org/">OpenCV</a></td>
+    <td>Computer vision library</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/nihui/ncnn-android-yolov8.git">ncnn-android-yolov8 / nihui</a></td>
+    <td>NCNN YOLOv8 implementation reference</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/Postroggy/OC_SORT_CPP.git">OC_SORT_CPP / Postroggy</a></td>
+    <td>OC-SORT C++ implementation reference</td>
+  </tr>
+</table>
+
+## 📧 Contact 📧
+
+-   Project Repository: [https://github.com/dmwzw/AICV-Mobile](https://github.com/dmwzw/AICV-Mobile)

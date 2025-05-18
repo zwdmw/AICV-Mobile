@@ -16,7 +16,7 @@
 </div>
 
 <div align="center">
-<b>👨‍💻 Author:</b> <a href="https://github.com/dmwzw">dmwzw</a> (<a href="mailto:1669406579@qq.com">1669406579@qq.com</a>)<br>
+<b>👨‍💻 Author:</b> <a href="https://github.com/dmwzw">dmwzw</a>
 <b>📱 Download:</b> <a href="https://github.com/dmwzw/AICV-Mobile/releases/tag/AI">AICV-Mobile-V1.0 (Pre-release)</a>
 </div>
 

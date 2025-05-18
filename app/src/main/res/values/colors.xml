@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- System default colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Material 3 Inspired Palette -->
+    <color name="colorPrimary">#006780</color> <!-- Slightly adjusted Teal -->
+    <color name="colorPrimaryDark">#004E62</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorSecondary">#4A636B</color> <!-- Blue Gray -->
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorTertiary">#5E5C7E</color> <!-- Deep Purple/Gray -->
+    <color name="colorOnTertiary">#FFFFFF</color>
+    <color name="colorAccent">#009688</color> <!-- Keep original Accent for specific highlights -->
+    <color name="colorBackground">#F8FDFF</color> <!-- Very Light Blue/Gray -->
+    <color name="colorOnBackground">#191C1D</color>
+    <color name="colorSurface">#F8FDFF</color> <!-- Same as Background for unified look -->
+    <color name="colorOnSurface">#191C1D</color>
+    <color name="colorSurfaceVariant">#DBE4E7</color> <!-- Slightly darker surface variant -->
+    <color name="colorOnSurfaceVariant">#40484B</color>
+    <color name="colorOutline">#70787C</color>
+    <color name="colorDivider">@color/colorOutline</color> <!-- Use Outline for dividers -->
+    <color name="colorError">#BA1A1A</color>
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="colorTransparentBlack">#80000000</color>
+    <color name="colorButtonBackground">#E0E0E0</color> <!-- Keep for simple buttons if needed -->
+
+    <!-- Tech Theme Colors - Light Mode -->
+    <color name="tech_primary">#0066FF</color> <!-- Vibrant Blue -->
+    <color name="tech_primary_variant">#004DCF</color> <!-- Darker Blue -->
+    <color name="tech_secondary">#00E5FF</color> <!-- Cyan -->
+    <color name="tech_secondary_variant">#00B0C2</color> <!-- Darker Cyan -->
+    <color name="tech_accent">#7B00FF</color> <!-- Purple -->
+    <color name="tech_accent_blue">#00B0FF</color> <!-- Bright blue for accents -->
+    <color name="tech_accent_teal">#00BFA5</color> <!-- Teal accent -->
+    <color name="tech_accent_purple">#9C27B0</color> <!-- Purple accent -->
+    <color name="tech_background">#F8F9FC</color> <!-- Light Blue-Gray -->
+    <color name="tech_surface">#FFFFFF</color> <!-- White -->
+    <color name="tech_dark_surface">#191919</color> <!-- Dark surface color -->
+    <color name="tech_surface_variant">#F0F4F8</color> <!-- Light Blue Gray variant -->
+    <color name="tech_on_surface">#202124</color> <!-- Dark Gray -->
+    <color name="tech_error">#FF3D71</color> <!-- Vibrant Red -->
+    <color name="tech_text_primary">#202124</color> <!-- Dark Gray -->
+    <color name="tech_text_secondary">#5F6368</color> <!-- Medium Gray -->
+    <color name="tech_text_hint">#9AA0A6</color> <!-- Light Gray -->
+    <color name="tech_ripple">#1A0066FF</color> <!-- Light Blue with alpha for ripple effects -->
+    <color name="tech_divider">#E8EAED</color> <!-- Light Gray divider -->
+    <color name="tech_card_border">#E8EAED</color> <!-- Light Gray border -->
+    <color name="tech_chip_selected">#2979FF</color> <!-- Selected Chip background -->
+    <color name="tech_chip_unselected">#E0E0E0</color> <!-- Unselected Chip background -->
+    <color name="tech_chip_text_color_selected">#FFFFFF</color> <!-- White text for selected chips -->
+    <color name="tech_chip_text_color_unselected">#5F6368</color> <!-- Gray text for unselected chips -->
+
+    <!-- Tech Theme Colors - Dark Mode -->
+    <color name="tech_primary_dark">#6B9FFF</color> <!-- Light Blue -->
+    <color name="tech_primary_variant_dark">#4E85F0</color> <!-- Darker Blue -->
+    <color name="tech_primary_dark_variant">#4E85F0</color> <!-- Alias for primary_variant_dark -->
+    <color name="tech_secondary_dark">#60F7FF</color> <!-- Light Cyan -->
+    <color name="tech_secondary_variant_dark">#47BBC2</color> <!-- Darker Cyan -->
+    <color name="tech_secondary_dark_variant">#47BBC2</color> <!-- Alias for secondary_variant_dark -->
+    <color name="tech_accent_dark">#9F52FF</color> <!-- Light Purple -->
+    <color name="tech_accent_blue_dark">#60B0FF</color> <!-- Bright blue for dark mode -->
+    <color name="tech_accent_teal_dark">#4DEFE9</color> <!-- Teal accent for dark mode -->
+    <color name="tech_accent_purple_dark">#E040FB</color> <!-- Purple accent for dark mode -->
+    <color name="tech_accent_transparent">#807B00FF</color> <!-- Semi-transparent accent color -->
+    <color name="tech_background_dark">#121212</color> <!-- Very Dark Gray -->
+    <color name="tech_surface_dark">#1E1E1E</color> <!-- Dark Gray -->
+    <color name="tech_surface_variant_dark">#242424</color> <!-- Slightly lighter dark gray -->
+    <color name="tech_on_surface_dark">#E8EAED</color> <!-- Light Gray -->
+    <color name="tech_error_dark">#FF6B94</color> <!-- Light Red -->
+    <color name="tech_text_primary_dark">#E8EAED</color> <!-- Light Gray -->
+    <color name="tech_text_secondary_dark">#BDC1C6</color> <!-- Medium Gray -->
+    <color name="tech_text_hint_dark">#9AA0A6</color> <!-- Light Gray -->
+    <color name="tech_ripple_dark">#336B9FFF</color> <!-- Blue with alpha for ripple effects -->
+    <color name="tech_divider_dark">#303030</color> <!-- Dark Gray divider -->
+    <color name="tech_card_border_dark">#2C2C2C</color> <!-- Dark Gray border -->
+    <color name="tech_chip_selected_dark">#6B9FFF</color> <!-- Selected Chip background dark mode -->
+    <color name="tech_chip_unselected_dark">#424242</color> <!-- Unselected Chip background dark mode -->
+    <color name="tech_chip_text_color_selected_dark">#FFFFFF</color> <!-- White text for selected chips -->
+    <color name="tech_chip_text_color_unselected_dark">#B0B0B0</color> <!-- Gray text for unselected chips -->
+
+    <!-- 添加芯片样式颜色 -->
+    <color name="chipBackground">#E0E0E0</color>
+    <color name="chipBackgroundSelected">#2196F3</color>
+    <color name="chipText">#000000</color>
+    <color name="chipTextSelected">#FFFFFF</color>
+</resources> 

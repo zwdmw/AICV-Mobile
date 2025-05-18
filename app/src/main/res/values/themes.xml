@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.AndroidDemo" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Base Tech theme. -->
+    <style name="Theme.AndroidDemo.Tech" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/tech_primary</item>
+        <item name="colorPrimaryVariant">@color/tech_primary_variant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/tech_secondary</item>
+        <item name="colorSecondaryVariant">@color/tech_secondary_variant</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Accent color -->
+        <item name="colorAccent">@color/tech_accent</item>
+        <!-- Background & Surface colors -->
+        <item name="android:colorBackground">@color/tech_background</item>
+        <item name="colorSurface">@color/tech_surface</item>
+        <item name="colorOnSurface">@color/tech_on_surface</item>
+        <!-- Error colors -->
+        <item name="colorError">@color/tech_error</item>
+        <item name="colorOnError">@color/white</item>
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/tech_text_primary</item>
+        <item name="android:textColorSecondary">@color/tech_text_secondary</item>
+        <item name="android:textColorHint">@color/tech_text_hint</item>
+        <!-- Ripple color -->
+        <item name="colorControlHighlight">@color/tech_ripple</item>
+        
+        <!-- Shape Appearance -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Tech.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Tech.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Tech.LargeComponent</item>
+        
+        <!-- CardView style -->
+        <item name="materialCardViewStyle">@style/Widget.Tech.CardView</item>
+        
+        <!-- Button style -->
+        <item name="materialButtonStyle">@style/Widget.Tech.Button</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.Tech.Button.OutlinedButton</item>
+        
+        <!-- Chip style -->
+        <item name="chipStyle">@style/Widget.Tech.Chip</item>
+        <item name="chipStandaloneStyle">@style/Widget.Tech.Chip.Standalone</item>
+        
+        <!-- Toolbar style -->
+        <item name="toolbarStyle">@style/Widget.AndroidDemo.Toolbar.Tech</item>
+        <item name="actionBarStyle">@style/Widget.AndroidDemo.ActionBar.Tech</item>
+        
+        <!-- System UI appearance -->
+        <item name="android:statusBarColor">@color/tech_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/tech_background</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        
+        <!-- Default Animation -->
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowEnterTransition">@android:transition/fade</item>
+        <item name="android:windowExitTransition">@android:transition/fade</item>
+    </style>
+    
+    <!-- Shape Appearances -->
+    <style name="ShapeAppearance.Tech.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+    
+    <style name="ShapeAppearance.Tech.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+    
+    <style name="ShapeAppearance.Tech.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+    
+    <!-- CardView Style -->
+    <style name="Widget.Tech.CardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardElevation">4dp</item>
+        <item name="cardBackgroundColor">@color/tech_surface</item>
+        <item name="strokeColor">@color/tech_card_border</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="rippleColor">@color/tech_ripple</item>
+    </style>
+    
+    <!-- Button Styles -->
+    <style name="Widget.Tech.Button" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/tech_primary</item>
+        <item name="rippleColor">@color/tech_ripple</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="elevation">2dp</item>
+    </style>
+    
+    <style name="Widget.Tech.Button.OutlinedButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/tech_primary</item>
+        <item name="strokeWidth">1.5dp</item>
+        <item name="rippleColor">@color/tech_ripple</item>
+        <item name="android:textColor">@color/tech_primary</item>
+    </style>
+    
+    <!-- Chip Styles -->
+    <style name="Widget.Tech.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/tech_surface</item>
+        <item name="chipStrokeColor">@color/tech_card_border</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="rippleColor">@color/tech_ripple</item>
+    </style>
+    
+    <style name="Widget.Tech.Chip.Standalone" parent="Widget.Material3.Chip.Input">
+        <item name="chipBackgroundColor">@color/tech_surface</item>
+        <item name="chipStrokeColor">@color/tech_card_border</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="rippleColor">@color/tech_ripple</item>
+    </style>
+    
+    <!-- Tech theme for light mode -->
+    <style name="Theme.AndroidDemo.Tech.Legacy" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/tech_primary</item>
+        <item name="colorPrimaryVariant">@color/tech_primary_variant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/tech_secondary</item>
+        <item name="colorSecondaryVariant">@color/tech_secondary_variant</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/tech_background</item>
+        <item name="colorSurface">@color/tech_surface</item>
+        <item name="colorOnSurface">@color/tech_on_surface</item>
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/tech_text_primary</item>
+        <item name="android:textColorSecondary">@color/tech_text_secondary</item>
+        <item name="android:textColorHint">@color/tech_text_hint</item>
+        <!-- Error color -->
+        <item name="colorError">@color/tech_error</item>
+        <!-- Status bar and navigation bar -->
+        <item name="android:statusBarColor">@color/tech_primary_variant</item>
+        <item name="android:navigationBarColor">@color/tech_surface</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <!-- Ripple color -->
+        <item name="colorControlHighlight">@color/tech_ripple</item>
+        <!-- Card style -->
+        <item name="materialCardViewStyle">@style/Widget.App.CardView</item>
+        <!-- Button style -->
+        <item name="materialButtonStyle">@style/Widget.App.Button</item>
+    </style>
+
+    <!-- Custom Card style -->
+    <style name="Widget.App.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="strokeColor">@color/tech_card_border</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardBackgroundColor">@color/tech_surface</item>
+    </style>
+
+    <!-- Custom Button style -->
+    <style name="Widget.App.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="elevation">2dp</item>
+    </style>
+
+    <!-- Tech theme based on dark Material theme -->
+    <style name="Theme.OCSort.Tech" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/tech_primary</item>
+        <item name="colorPrimaryVariant">@color/tech_primary_variant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/tech_secondary</item>
+        <item name="colorSecondaryVariant">@color/tech_secondary_variant</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/tech_background</item>
+        <item name="colorSurface">@color/tech_surface</item>
+        <item name="colorOnSurface">@color/tech_on_surface</item>
+        <item name="colorError">@color/tech_error</item>
+        <!-- Status bar and navigation bar -->
+        <item name="android:statusBarColor">@color/tech_background</item>
+        <item name="android:navigationBarColor">@color/tech_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/tech_text_primary</item>
+        <item name="android:textColorSecondary">@color/tech_text_secondary</item>
+        <item name="android:textColorHint">@color/tech_text_hint</item>
+        <!-- Component styles -->
+        <item name="materialButtonStyle">@style/Widget.OCSort.Tech.Button</item>
+        <item name="chipStyle">@style/Widget.OCSort.Tech.Chip</item>
+        <item name="materialCardViewStyle">@style/Widget.OCSort.Tech.CardView</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.OCSort.Tech.MaterialAlertDialog</item>
+    </style>
+
+    <!-- Button style -->
+    <style name="Widget.OCSort.Tech.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/tech_primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Chip style -->
+    <style name="Widget.OCSort.Tech.Chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/tech_surface_variant</item>
+        <item name="chipStrokeColor">@color/tech_accent_blue</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@color/tech_text_primary</item>
+        <item name="checkedIconVisible">true</item>
+        <item name="rippleColor">@color/tech_accent_blue</item>
+    </style>
+
+    <!-- Card style -->
+    <style name="Widget.OCSort.Tech.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/tech_surface</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="contentPadding">16dp</item>
+        <item name="rippleColor">@color/tech_accent_blue</item>
+    </style>
+
+    <!-- Dialog style -->
+    <style name="ThemeOverlay.OCSort.Tech.MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorSurface">@color/tech_surface</item>
+        <item name="colorOnSurface">@color/tech_on_surface</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.OCSort.Tech.Dialog.Button</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.OCSort.Tech.Dialog.Button</item>
+        <item name="android:background">@color/tech_surface</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="cornerRadius">16dp</item>
+    </style>
+
+    <style name="Widget.OCSort.Tech.Dialog.Button" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/tech_accent_blue</item>
+        <item name="rippleColor">@color/tech_primary_variant</item>
+    </style>
+
+    <!-- Shape Appearances -->
+    <style name="ShapeAppearance.OCSort.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="ShapeAppearance.OCSort.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeAppearance.OCSort.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+    
+    <!-- Tech Theme Shape Appearances -->
+    <style name="ShapeAppearance.OCSort.Tech.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="ShapeAppearance.OCSort.Tech.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeAppearance.OCSort.Tech.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- Tech Theme Styles -->
+
+    <!-- Toolbar Style -->
+    <style name="Widget.AndroidDemo.Toolbar.Tech" parent="Widget.Material3.Toolbar">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:elevation">4dp</item>
+        <item name="titleTextColor">?attr/colorOnPrimary</item>
+        <item name="subtitleTextColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="Widget.AndroidDemo.ActionBar.Tech" parent="Widget.Material3.ActionBar.Solid">
+        <item name="background">?attr/colorPrimary</item>
+        <item name="elevation">4dp</item>
+        <item name="titleTextStyle">@style/TextAppearance.AndroidDemo.ActionBar.Title.Tech</item>
+    </style>
+
+    <style name="TextAppearance.AndroidDemo.ActionBar.Title.Tech" parent="TextAppearance.Material3.ActionBar.Title">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <!-- Chip Style -->
+    <style name="Widget.AndroidDemo.Chip.Tech" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/tech_chip_background_selector</item>
+        <item name="chipStrokeColor">@color/tech_accent</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipCornerRadius">12dp</item>
+        <item name="android:textColor">@color/tech_chip_text_selector</item>
+        <item name="android:textSize">14sp</item>
+        <item name="rippleColor">@color/tech_ripple</item>
+        <item name="chipIconTint">@color/tech_chip_text_selector</item>
+        <item name="chipStartPadding">12dp</item>
+        <item name="chipEndPadding">12dp</item>
+    </style>
+
+    <style name="Widget.AndroidDemo.ChipGroup.Tech" parent="Widget.Material3.ChipGroup">
+        <item name="chipSpacingHorizontal">8dp</item>
+        <item name="chipSpacingVertical">8dp</item>
+        <item name="singleSelection">false</item>
+    </style>
+</resources> 

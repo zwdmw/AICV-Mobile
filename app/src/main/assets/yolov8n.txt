@@ -1,0 +1,80 @@
+1. person - 人  
+2. bicycle - 自行车  
+3. car - 汽车  
+4. motorcycle - 摩托车  
+5. airplane - 飞机  
+6. bus - 公交车  
+7. train - 火车  
+8. truck - 卡车  
+9. boat - 船  
+10. traffic light - 红绿灯  
+11. fire hydrant - 消防栓  
+12. stop sign - 停车标志  
+13. parking meter - 停车计时器  
+14. bench - 长椅  
+15. bird - 鸟  
+16. cat - 猫  
+17. dog - 狗  
+18. horse - 马  
+19. sheep - 羊  
+20. cow - 牛  
+21. elephant - 大象  
+22. bear - 熊  
+23. zebra - 斑马  
+24. giraffe - 长颈鹿  
+25. backpack - 背包  
+26. umbrella - 雨伞  
+27. handbag - 手提包  
+28. tie - 领带  
+29. suitcase - 行李箱  
+30. frisbee - 飞盘  
+31. skis - 滑雪板  
+32. snowboard - 单板滑雪板  
+33. sports ball - 运动球  
+34. kite - 风筝  
+35. baseball bat - 棒球棒  
+36. baseball glove - 棒球手套  
+37. skateboard - 滑板  
+38. surfboard - 冲浪板  
+39. tennis racket - 网球拍  
+40. bottle - 瓶子  
+41. wine glass - 酒杯  
+42. cup - 杯子  
+43. fork - 叉子  
+44. knife - 刀  
+45. spoon - 勺子  
+46. bowl - 碗  
+47. banana - 香蕉  
+48. apple - 苹果  
+49. sandwich - 三明治  
+50. orange - 橙子  
+51. broccoli - 西兰花  
+52. carrot - 胡萝卜  
+53. hot dog - 热狗  
+54. pizza - 披萨  
+55. donut - 甜甜圈  
+56. cake - 蛋糕  
+57. chair - 椅子  
+58. couch - 沙发  
+59. potted plant - 盆栽植物  
+60. bed - 床  
+61. dining table - 餐桌  
+62. toilet - 马桶  
+63. tv - 电视  
+64. laptop - 笔记本电脑  
+65. mouse - 鼠标  
+66. remote - 遥控器  
+67. keyboard - 键盘  
+68. cell phone - 手机  
+69. microwave - 微波炉  
+70. oven - 烤箱  
+71. toaster - 烤面包机  
+72. sink - 水槽  
+73. refrigerator - 冰箱  
+74. book - 书  
+75. clock - 时钟  
+76. vase - 花瓶  
+77. scissors - 剪刀  
+78. teddy bear - 泰迪熊  
+79. hair drier - 吹风机  
+80. toothbrush - 牙刷

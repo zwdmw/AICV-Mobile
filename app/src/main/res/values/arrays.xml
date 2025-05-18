@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- New arrays for class categories -->
+    <string-array name="class_categories">
+        <item>全部</item>
+        <item>人物/动物</item>
+        <item>交通工具</item>
+        <item>家居用品</item>
+        <item>电子设备</item>
+        <item>食物/餐具</item>
+    </string-array>
+    
+    <!-- 所有COCO数据集类别名称 -->
+    <string-array name="all_class_names">
+        <item>person</item>
+        <item>bicycle</item>
+        <item>car</item>
+        <item>motorcycle</item>
+        <item>airplane</item>
+        <item>bus</item>
+        <item>train</item>
+        <item>truck</item>
+        <item>boat</item>
+        <item>traffic light</item>
+        <item>fire hydrant</item>
+        <item>stop sign</item>
+        <item>parking meter</item>
+        <item>bench</item>
+        <item>bird</item>
+        <item>cat</item>
+        <item>dog</item>
+        <item>horse</item>
+        <item>sheep</item>
+        <item>cow</item>
+        <item>elephant</item>
+        <item>bear</item>
+        <item>zebra</item>
+        <item>giraffe</item>
+        <item>backpack</item>
+        <item>umbrella</item>
+        <item>handbag</item>
+        <item>tie</item>
+        <item>suitcase</item>
+        <item>frisbee</item>
+        <item>skis</item>
+        <item>snowboard</item>
+        <item>sports ball</item>
+        <item>kite</item>
+        <item>baseball bat</item>
+        <item>baseball glove</item>
+        <item>skateboard</item>
+        <item>surfboard</item>
+        <item>tennis racket</item>
+        <item>bottle</item>
+        <item>wine glass</item>
+        <item>cup</item>
+        <item>fork</item>
+        <item>knife</item>
+        <item>spoon</item>
+        <item>bowl</item>
+        <item>banana</item>
+        <item>apple</item>
+        <item>sandwich</item>
+        <item>orange</item>
+        <item>broccoli</item>
+        <item>carrot</item>
+        <item>hot dog</item>
+        <item>pizza</item>
+        <item>donut</item>
+        <item>cake</item>
+        <item>chair</item>
+        <item>couch</item>
+        <item>potted plant</item>
+        <item>bed</item>
+        <item>dining table</item>
+        <item>toilet</item>
+        <item>tv</item>
+        <item>laptop</item>
+        <item>mouse</item>
+        <item>remote</item>
+        <item>keyboard</item>
+        <item>cell phone</item>
+        <item>microwave</item>
+        <item>oven</item>
+        <item>toaster</item>
+        <item>sink</item>
+        <item>refrigerator</item>
+        <item>book</item>
+        <item>clock</item>
+        <item>vase</item>
+        <item>scissors</item>
+        <item>teddy bear</item>
+        <item>hair drier</item>
+        <item>toothbrush</item>
+    </string-array>
+    
+    <!-- 各个大类中具体类别的中文名称 -->
+    <string-array name="person_animal_class_names">
+        <item>人</item>
+        <item>鸟</item>
+        <item>猫</item>
+        <item>狗</item>
+        <item>马</item>
+        <item>羊</item>
+        <item>牛</item>
+        <item>大象</item>
+        <item>熊</item>
+        <item>斑马</item>
+        <item>长颈鹿</item>
+    </string-array>
+    
+    <string-array name="vehicle_class_names">
+        <item>自行车</item>
+        <item>汽车</item>
+        <item>摩托车</item>
+        <item>飞机</item>
+        <item>公交车</item>
+        <item>火车</item>
+        <item>卡车</item>
+        <item>船</item>
+    </string-array>
+    
+    <string-array name="household_class_names">
+        <item>背包</item>
+        <item>雨伞</item>
+        <item>手提包</item>
+        <item>领带</item>
+        <item>箱子</item>
+        <item>椅子</item>
+        <item>沙发</item>
+        <item>盆栽</item>
+        <item>床</item>
+        <item>餐桌</item>
+        <item>厕所</item>
+        <item>书</item>
+        <item>时钟</item>
+        <item>花瓶</item>
+        <item>剪刀</item>
+        <item>泰迪熊</item>
+        <item>吹风机</item>
+        <item>牙刷</item>
+    </string-array>
+    
+    <string-array name="electronics_class_names">
+        <item>电视</item>
+        <item>笔记本</item>
+        <item>鼠标</item>
+        <item>遥控器</item>
+        <item>键盘</item>
+        <item>手机</item>
+        <item>微波炉</item>
+        <item>烤箱</item>
+    </string-array>
+    
+    <string-array name="food_kitchen_class_names">
+        <item>瓶子</item>
+        <item>酒杯</item>
+        <item>杯子</item>
+        <item>叉子</item>
+        <item>刀</item>
+        <item>勺子</item>
+        <item>碗</item>
+        <item>香蕉</item>
+        <item>苹果</item>
+        <item>三明治</item>
+        <item>橙子</item>
+        <item>西兰花</item>
+        <item>胡萝卜</item>
+        <item>热狗</item>
+        <item>披萨</item>
+        <item>甜甜圈</item>
+        <item>蛋糕</item>
+    </string-array>
+    
+    <!-- Class indices for each category -->
+    <integer-array name="person_animal_classes">
+        <item>0</item>  <!-- person -->
+        <item>14</item> <!-- bird -->
+        <item>15</item> <!-- cat -->
+        <item>16</item> <!-- dog -->
+        <item>17</item> <!-- horse -->
+        <item>18</item> <!-- sheep -->
+        <item>19</item> <!-- cow -->
+        <item>20</item> <!-- elephant -->
+        <item>21</item> <!-- bear -->
+        <item>22</item> <!-- zebra -->
+        <item>23</item> <!-- giraffe -->
+    </integer-array>
+    
+    <integer-array name="vehicle_classes">
+        <item>1</item>  <!-- bicycle -->
+        <item>2</item>  <!-- car -->
+        <item>3</item>  <!-- motorcycle -->
+        <item>4</item>  <!-- airplane -->
+        <item>5</item>  <!-- bus -->
+        <item>6</item>  <!-- train -->
+        <item>7</item>  <!-- truck -->
+        <item>8</item>  <!-- boat -->
+    </integer-array>
+    
+    <integer-array name="household_classes">
+        <item>24</item> <!-- backpack -->
+        <item>25</item> <!-- umbrella -->
+        <item>26</item> <!-- handbag -->
+        <item>27</item> <!-- tie -->
+        <item>28</item> <!-- suitcase -->
+        <item>56</item> <!-- chair -->
+        <item>57</item> <!-- couch -->
+        <item>58</item> <!-- potted plant -->
+        <item>59</item> <!-- bed -->
+        <item>60</item> <!-- dining table -->
+        <item>61</item> <!-- toilet -->
+        <item>70</item> <!-- book -->
+        <item>71</item> <!-- clock -->
+        <item>72</item> <!-- vase -->
+        <item>73</item> <!-- scissors -->
+        <item>74</item> <!-- teddy bear -->
+        <item>75</item> <!-- hair drier -->
+        <item>76</item> <!-- toothbrush -->
+    </integer-array>
+    
+    <integer-array name="electronics_classes">
+        <item>62</item> <!-- tv -->
+        <item>63</item> <!-- laptop -->
+        <item>64</item> <!-- mouse -->
+        <item>65</item> <!-- remote -->
+        <item>66</item> <!-- keyboard -->
+        <item>67</item> <!-- cell phone -->
+        <item>68</item> <!-- microwave -->
+        <item>69</item> <!-- oven -->
+    </integer-array>
+    
+    <integer-array name="food_kitchen_classes">
+        <item>39</item> <!-- bottle -->
+        <item>40</item> <!-- wine glass -->
+        <item>41</item> <!-- cup -->
+        <item>42</item> <!-- fork -->
+        <item>43</item> <!-- knife -->
+        <item>44</item> <!-- spoon -->
+        <item>45</item> <!-- bowl -->
+        <item>46</item> <!-- banana -->
+        <item>47</item> <!-- apple -->
+        <item>48</item> <!-- sandwich -->
+        <item>49</item> <!-- orange -->
+        <item>50</item> <!-- broccoli -->
+        <item>51</item> <!-- carrot -->
+        <item>52</item> <!-- hot dog -->
+        <item>53</item> <!-- pizza -->
+        <item>54</item> <!-- donut -->
+        <item>55</item> <!-- cake -->
+    </integer-array>
+    
+    <!-- OIV数据集类别名称 -->
+    <string-array name="oiv_class_names">
+        <item>人</item>
+        <item>自行车</item>
+        <item>汽车</item>
+        <item>摩托车</item>
+        <item>飞机</item>
+        <item>公交车</item>
+        <item>火车</item>
+        <item>卡车</item>
+        <item>船</item>
+        <item>红绿灯</item>
+        <item>消防栓</item>
+        <item>停止标志</item>
+        <item>停车计时器</item>
+        <item>长凳</item>
+        <item>鸟</item>
+        <item>猫</item>
+        <item>狗</item>
+        <item>马</item>
+        <item>羊</item>
+        <item>牛</item>
+        <item>大象</item>
+        <item>熊</item>
+        <item>斑马</item>
+        <item>长颈鹿</item>
+        <item>背包</item>
+        <item>雨伞</item>
+        <item>手提包</item>
+        <item>领带</item>
+        <item>手提箱</item>
+        <item>飞盘</item>
+        <item>滑雪板</item>
+        <item>单板滑雪</item>
+        <item>运动球</item>
+        <item>风筝</item>
+        <item>棒球棒</item>
+        <item>棒球手套</item>
+        <item>滑板</item>
+        <item>冲浪板</item>
+        <item>网球拍</item>
+        <item>瓶子</item>
+        <item>酒杯</item>
+        <item>杯子</item>
+        <item>叉子</item>
+        <item>刀</item>
+        <item>勺子</item>
+        <item>碗</item>
+        <item>香蕉</item>
+        <item>苹果</item>
+        <item>三明治</item>
+        <item>橙子</item>
+        <item>西兰花</item>
+        <item>胡萝卜</item>
+        <item>热狗</item>
+        <item>披萨</item>
+        <item>甜甜圈</item>
+        <item>蛋糕</item>
+        <item>椅子</item>
+        <item>沙发</item>
+        <item>盆栽</item>
+        <item>床</item>
+        <item>餐桌</item>
+        <item>厕所</item>
+        <item>电视</item>
+        <item>笔记本电脑</item>
+        <item>鼠标</item>
+        <item>遥控器</item>
+        <item>键盘</item>
+        <item>手机</item>
+        <item>微波炉</item>
+        <item>烤箱</item>
+        <item>烤面包机</item>
+        <item>水槽</item>
+        <item>冰箱</item>
+        <item>书</item>
+        <item>时钟</item>
+        <item>花瓶</item>
+        <item>剪刀</item>
+        <item>泰迪熊</item>
+        <item>吹风机</item>
+        <item>牙刷</item>
+        <item>洗衣机</item>
+        <item>搅拌机</item>
+        <item>电脑</item>
+        <item>打印机</item>
+        <item>相机</item>
+        <item>耳机</item>
+        <item>电话</item>
+        <item>平板</item>
+        <item>咖啡机</item>
+        <item>自行车轮</item>
+        <item>太阳镜</item>
+        <item>眼镜</item>
+        <item>手表</item>
+        <item>钱包</item>
+        <item>行李箱</item>
+        <item>帐篷</item>
+        <item>窗帘</item>
+        <item>枕头</item>
+        <item>吉他</item>
+        <item>钢琴</item>
+        <item>鼓</item>
+        <item>篮球</item>
+        <item>足球</item>
+        <item>棒球</item>
+    </string-array>
+</resources> 

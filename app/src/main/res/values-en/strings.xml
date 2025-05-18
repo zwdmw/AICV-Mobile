@@ -1,0 +1,56 @@
+<resources>
+    <!-- App name variants -->
+    <string name="app_name">AICV Mobile</string>
+    <string name="app_name_short">AICV-Mobile</string>
+
+    <!-- Help Dialog Strings (English) -->
+    <string name="help_title">App Function Guide</string>
+    <string name="help_main_features_header">Main Features</string>
+    <string name="help_main_features_content">This application uses YOLOv8 object detection technology and an improved OC-SORT tracking algorithm (combined with Kalman filters) to identify and track various objects in real-time, supporting multiple visual styles and custom settings. Accelerated by the NCNN framework, it offers instance segmentation and efficient object tracking.</string>
+    <string name="help_default_settings">Default Config: Starts with YOLOv8n-seg segmentation model, detection and mask thresholds at 0.30, GPU as the running device, and Quantum Spectrum visual style.</string>
+    <string name="help_models_header">Model Descriptions</string>
+    <string name="help_model_yolov8n">• YOLOv8n: Lightweight, fastest, suitable for low-spec devices (COCO 80 classes).</string>
+    <string name="help_model_yolov8s">• YOLOv8s: Small model, balanced speed and accuracy (COCO 80 classes).</string>
+    <string name="help_model_yolov8m">• YOLOv8m: Medium model, higher accuracy (COCO 80 classes).</string>
+    <string name="help_model_yolov8n_seg">• YOLOv8n-seg: Lightweight segmentation model, fast mask generation.</string>
+    <string name="help_model_yolov8s_seg">• YOLOv8s-seg: Small segmentation model, balanced speed and mask quality.</string>
+    <string name="help_model_yolov8m_seg">• YOLOv8m-seg: Medium segmentation model, high-quality masks.</string>
+    <string name="help_model_yolov8n_oiv7">• YOLOv8n-oiv7: Lightweight extended model (OIV7 600+ classes).</string>
+    <string name="help_model_yolov8s_oiv7">• YOLOv8s-oiv7: Small extended model (OIV7 600+ classes).</string>
+    <string name="help_model_yolov8m_oiv7">• YOLOv8m-oiv7: Medium extended model (OIV7 600+ classes).</string>
+    <string name="help_operation_guide_header">Operation Guide</string>
+    <string name="help_operation_guide_model">1. Model Selection: Top dropdown (n: fast, m: accurate, seg: segmentation, oiv: more classes).</string>
+    <string name="help_operation_guide_mode">2. Running Mode: CPU (compatible) / GPU (fast).</string>
+    <string name="help_operation_guide_style">3. Detection Style: 10 visual styles available; click info button for details.</string>
+    <string name="help_operation_guide_det_thresh">4. Detection Threshold (0-1): Higher value is stricter (suggested: 0.25-0.65).</string>
+    <string name="help_operation_guide_mask_thresh">5. Mask Threshold (Seg models): Adjusts mask clarity (suggested: 0.25-0.5).</string>
+    <string name="help_buttons_header">Function Buttons</string>
+    <string name="help_buttons_camera">• Camera Switch: Toggle front/rear camera.</string>
+    <string name="help_buttons_filter">• Class Filter: Select classes to detect (supports search).</string>
+    <string name="help_buttons_tracking_settings">• Tracking Settings: Adjust IoU Threshold (matching strictness), Max Age (frames to keep lost tracks), Min Hits (frames to confirm new track).</string>
+    <string name="help_buttons_mask_tracking">• Mask Tracking (Seg models): Use mask info to aid tracking, improving accuracy (can be disabled).</string>
+    <!-- Tracking Modes -->
+    <string name="help_tracking_modes_header">Tracking Mode Explanations</string>
+    <string name="help_tracking_mode_stable">• Stable Mode: Suitable for fixed camera scenarios with slow-moving or static targets. Optimizes tracking stability and reduces ID switches.</string>
+    <string name="help_tracking_mode_handheld">• Handheld Mode: Optimized for camera movement, enables motion compensation, considers acceleration. Suitable for handheld shooting scenarios.</string>
+    <string name="help_tracking_mode_note">• Other Modes: The system might auto-adjust based on the scene or add more specific modes in the future.</string>
+    <!-- End Tracking Modes -->
+    <string name="help_tracking_tech_header">Object Tracking Technology</string>
+    <string name="help_tracking_tech_intro">Real-time multi-object tracking system using improved OC-SORT concepts with Kalman filters, combined with YOLOv8 for high accuracy and low latency.</string>
+    <string name="help_tracking_tech_multi">• Multi-Object Tracking: Tracks multiple objects simultaneously, assigning unique IDs, handles occlusion and reappearance.</string>
+    <string name="help_tracking_tech_perf">• Real-time Performance: Optimized algorithm, multi-threaded design, achieves 20-30 FPS on mid-range devices.</string>
+    <string name="help_tracking_tech_algo">• Core Algorithm: Kalman filter for motion prediction, Hungarian/greedy algorithm for association, hit/miss counting for occlusion handling.</string>
+    <string name="help_tracking_tech_mask">• Mask-Enhanced Tracking: Leverages pixel-level masks to improve tracking of irregular shapes and similar objects.</string>
+    <string name="help_tracking_tech_occlusion">• Occlusion Handling: Advanced inference mechanism predicts occluded trajectories and recovers tracking.</string>
+    <string name="help_tracking_tech_scenarios">• Use Cases: Pedestrian/vehicle tracking, sports analysis, security surveillance, adaptable to various environments.</string>
+    <string name="help_tech_specs_header">Technical Specifications</string>
+    <string name="help_tech_specs_engine">• Detection Engine: NCNN-optimized YOLOv8</string>
+    <string name="help_tech_specs_algo">• Tracking Algorithm: Improved OC-SORT + Kalman Filter</string>
+    <string name="help_tech_specs_datasets">• Datasets: COCO (80 classes), Open Images V7 (600+ classes)</string>
+    <string name="help_tech_specs_reqs">• Requirements: Android 6.0+, OpenCL/Vulkan recommended</string>
+    <string name="help_author_name">Author: Wei Zhang</string>
+    <string name="help_author_contact">Contact: zweicumt@163.com</string>
+    <string name="help_language_switch">中文</string> <!-- Button text to switch TO Chinese -->
+    <string name="help_close_button">Close</string>
+
+</resources> 

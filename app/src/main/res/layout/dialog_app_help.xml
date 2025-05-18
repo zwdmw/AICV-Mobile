@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FF050A14"
+    android:padding="12dp">
+
+    <!-- 背景渐变效果层 -->
+    <View
+        android:id="@+id/backgroundGradient"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/tech_gradient_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 使用单一卡片，让内部使用ConstraintLayout排列元素 -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/helpCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:background="#FF0A1526"
+        app:cardBackgroundColor="#FF0A1526"
+        app:strokeColor="#FF00E5FF"
+        app:strokeWidth="1.5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- 使用ConstraintLayout作为主容器，避免嵌套LinearLayout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF0A1526"
+            android:padding="12dp">
+
+            <!-- 标题栏 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/titleContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tech_header_background"
+                android:padding="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <View
+                    android:id="@+id/titleIndicator"
+                    android:layout_width="3dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/tech_glow_indicator"
+                    app:layout_constraintTop_toTopOf="@id/textViewHelpTitle"
+                    app:layout_constraintBottom_toBottomOf="@id/textViewHelpTitle"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/textViewHelpTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/help_title"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:background="@android:color/transparent"
+                    android:shadowColor="#8000E5FF"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="8"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/titleIndicator"
+                    app:layout_constraintEnd_toStartOf="@id/versionText"/>
+
+                <TextView
+                    android:id="@+id/versionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name_short"
+                    android:textColor="#FF00E5FF"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintTop_toTopOf="@id/textViewHelpTitle"
+                    app:layout_constraintBottom_toBottomOf="@id/textViewHelpTitle"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 内容区域 - 固定高度，确保不会扩展太大 -->
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/contentScrollView"
+                android:layout_width="0dp"
+                android:layout_height="400dp"
+                android:layout_marginTop="8dp"
+                android:background="#FF0A1526"
+                android:fillViewport="true"
+                app:layout_constraintTop_toBottomOf="@id/titleContainer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/helpContentLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#FF0A1526">
+
+                    <!-- 各部分使用相同的样式模式 -->
+                    <!-- 主要功能说明 -->
+                    <TextView
+                        android:id="@+id/mainFeaturesHeader"
+                        style="@style/HelpSectionHeader"
+                        android:text="@string/help_main_features_header"/>
+                        
+                    <TextView
+                        android:id="@+id/mainFeaturesContent"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_main_features_content"/>
+                        
+                    <TextView
+                        android:id="@+id/defaultSettings"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_default_settings"
+                        android:layout_marginBottom="16dp"/>
+                        
+                    <!-- 模型说明 -->
+                    <TextView
+                        android:id="@+id/modelsHeader"
+                        style="@style/HelpSectionHeader"
+                        android:text="@string/help_models_header"/>
+                    
+                    <TextView
+                        android:id="@+id/modelYolov8n"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_model_yolov8n"/>
+                        
+                    <TextView
+                        android:id="@+id/modelYolov8s"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_model_yolov8s"/>
+                        
+                    <TextView
+                        android:id="@+id/modelYolov8m"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_model_yolov8m"/>
+                        
+                    <TextView
+                        android:id="@+id/modelYolov8nseg"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_model_yolov8n_seg"/>
+                        
+                    <TextView
+                        android:id="@+id/modelYolov8sseg"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_model_yolov8s_seg"/>
+                        
+                    <TextView
+                        android:id="@+id/modelYolov8mseg"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_model_yolov8m_seg"/>
+                        
+                    <TextView
+                        android:id="@+id/modelYolov8noiv7"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_model_yolov8n_oiv7"/>
+                        
+                    <TextView
+                        android:id="@+id/modelYolov8soiv7"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_model_yolov8s_oiv7"/>
+                        
+                    <TextView
+                        android:id="@+id/modelYolov8moiv7"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_model_yolov8m_oiv7"
+                        android:layout_marginBottom="16dp"/>
+                        
+                    <!-- 操作指南 -->
+                    <TextView
+                        android:id="@+id/operationGuideHeader"
+                        style="@style/HelpSectionHeader"
+                        android:text="@string/help_operation_guide_header"/>
+                        
+                    <TextView
+                        android:id="@+id/operationGuideModelSelection"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_operation_guide_model"/>
+                        
+                    <TextView
+                        android:id="@+id/operationGuideRunningMode"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_operation_guide_mode"/>
+                        
+                    <TextView
+                        android:id="@+id/operationGuideDetectionStyle"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_operation_guide_style"/>
+                        
+                    <TextView
+                        android:id="@+id/operationGuideDetectionThreshold"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_operation_guide_det_thresh"/>
+                        
+                    <TextView
+                        android:id="@+id/operationGuideMaskThreshold"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_operation_guide_mask_thresh"
+                        android:layout_marginBottom="16dp"/>
+                        
+                    <!-- 功能按钮说明 -->
+                    <TextView
+                        android:id="@+id/functionalButtonsHeader"
+                        style="@style/HelpSectionHeader"
+                        android:text="@string/help_buttons_header"/>
+                        
+                    <TextView
+                        android:id="@+id/functionalButtonsViewSwitch"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_buttons_camera"/>
+                        
+                    <TextView
+                        android:id="@+id/functionalButtonsClassFilter"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_buttons_filter"/>
+                        
+                    <TextView
+                        android:id="@+id/functionalButtonsTrackingSettings"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_buttons_tracking_settings"/>
+                        
+                    <TextView
+                        android:id="@+id/functionalButtonsMaskTracking"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_buttons_mask_tracking"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Tracking Modes -->
+                    <TextView
+                        android:id="@+id/trackingModesHeader"
+                        style="@style/HelpSectionHeader"
+                        android:text="@string/help_tracking_modes_header"/>
+                    <TextView
+                        android:id="@+id/trackingModeStable"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_tracking_mode_stable"/>
+                    <TextView
+                        android:id="@+id/trackingModeHandheld"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_tracking_mode_handheld"/>
+                     <TextView
+                        android:id="@+id/trackingModeNote"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_tracking_mode_note"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- 跟踪技术详解 -->
+                    <TextView
+                        android:id="@+id/trackingTechHeader"
+                        style="@style/HelpSectionHeader"
+                        android:text="@string/help_tracking_tech_header"/>
+                        
+                    <TextView
+                        android:id="@+id/trackingTechIntro"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_tracking_tech_intro"/>
+                        
+                    <TextView
+                        android:id="@+id/trackingFeatures"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_tracking_tech_multi"/>
+                        
+                    <TextView
+                        android:id="@+id/trackingPerformance"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_tracking_tech_perf"/>
+                        
+                    <TextView
+                        android:id="@+id/trackingAlgorithm"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_tracking_tech_algo"/>
+                        
+                    <TextView
+                        android:id="@+id/maskTrackingTech"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_tracking_tech_mask"/>
+                        
+                    <TextView
+                        android:id="@+id/trackingOcclusion"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_tracking_tech_occlusion"/>
+                        
+                    <TextView
+                        android:id="@+id/trackingScenarios"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_tracking_tech_scenarios"
+                        android:layout_marginBottom="16dp"/>
+                        
+                    <!-- 技术规格 -->
+                    <TextView
+                        android:id="@+id/technicalSpecsHeader"
+                        style="@style/HelpSectionHeader"
+                        android:text="@string/help_tech_specs_header"/>
+                        
+                    <TextView
+                        android:id="@+id/technicalSpecsEngine"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_tech_specs_engine"/>
+                        
+                    <TextView
+                        android:id="@+id/technicalSpecsAlgorithm"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_tech_specs_algo"/>
+                        
+                    <TextView
+                        android:id="@+id/technicalSpecsDatasets"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_tech_specs_datasets"/>
+                        
+                    <TextView
+                        android:id="@+id/technicalSpecsRequirements"
+                        style="@style/HelpSectionContent"
+                        android:text="@string/help_tech_specs_reqs"
+                        android:layout_marginBottom="16dp"/>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <!-- 作者信息 - 直接在内容区域下方 -->
+            <LinearLayout
+                android:id="@+id/authorInfoContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FF0A1526"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/contentScrollView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+                
+                <View
+                    android:id="@+id/authorDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#2000E5FF"
+                    android:layout_marginBottom="8dp"/>
+                    
+                <TextView
+                    android:id="@+id/authorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/help_author_name"
+                    android:textColor="#80FFFFFF"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:background="#FF0A1526"
+                    android:layout_marginBottom="2dp"/>
+                    
+                <TextView
+                    android:id="@+id/authorContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/help_author_contact"
+                    android:textColor="#80FFFFFF"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:background="#FF0A1526"
+                    android:layout_marginBottom="4dp"/>
+            </LinearLayout>
+
+            <!-- 底部按钮 - 确保位于底部 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLanguageSwitch"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/help_language_switch"
+                android:textColor="#FF00E5FF"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/authorInfoContainer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCloseHelp"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:paddingVertical="10dp"
+                android:text="@string/help_close_button"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="#FF0088AA"
+                app:cornerRadius="12dp"
+                app:rippleColor="#80FFFFFF"
+                app:strokeColor="#4000E5FF"
+                app:strokeWidth="1dp"
+                app:elevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/authorInfoContainer"
+                app:layout_constraintStart_toEndOf="@id/btnLanguageSwitch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout> 

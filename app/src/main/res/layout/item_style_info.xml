@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/ripple_effect"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="10dp"
+    android:layout_marginBottom="6dp">
+
+    <!-- 风格名称 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <View
+            android:id="@+id/styleIndicator"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/style_indicator_dot"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/textStyleName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="赛博格网格 (默认)"/>
+
+    </LinearLayout>
+
+    <!-- 风格描述 -->
+    <TextView
+        android:id="@+id/textStyleDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#B0FFFFFF"
+        android:text="四角标记+箭头连接ID，适合一般检测场景"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="20dp"/>
+
+</LinearLayout> 

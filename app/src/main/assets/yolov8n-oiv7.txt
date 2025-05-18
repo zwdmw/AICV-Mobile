@@ -1,0 +1,607 @@
+1. Accordion - 手风琴  
+2. Adhesive tape - 胶带  
+3. Aircraft - 飞机  
+4. Alarm clock - 闹钟  
+5. Alpaca - 羊驼  
+6. Ambulance - 救护车  
+7. Animal - 动物  
+8. Ant - 蚂蚁  
+9. Antelope - 羚羊  
+10. Apple - 苹果  
+11. Armadillo - 犰狳  
+12. Artichoke - 洋蓟  
+13. Auto part - 汽车零件  
+14. Axe - 斧头  
+15. Backpack - 背包  
+16. Bagel - 贝果  
+17. Baked goods - 烘焙食品  
+18. Balance beam - 平衡木  
+19. Ball (Object) - 球（物体）  
+20. Balloon - 气球  
+21. Banana - 香蕉  
+22. Band-aid - 创可贴  
+23. Banjo - 班卓琴  
+24. Barge - 驳船  
+25. Barrel - 桶  
+26. Baseball bat - 棒球棒  
+27. Baseball glove - 棒球手套  
+28. Bat (Animal) - 蝙蝠（动物）  
+29. Bathroom accessory - 浴室配件  
+30. Bathroom cabinet - 浴室柜  
+31. Bathtub - 浴缸  
+32. Beaker - 烧杯  
+33. Bear - 熊  
+34. Beard - 胡须  
+35. Bed - 床  
+36. Bee - 蜜蜂  
+37. Beehive - 蜂箱  
+38. Beer - 啤酒  
+39. Beetle - 甲虫  
+40. Bell pepper - 甜椒  
+41. Belt - 腰带  
+42. Bench - 长椅  
+43. Bicycle - 自行车  
+44. Bicycle helmet - 自行车头盔  
+45. Bicycle wheel - 自行车轮  
+46. Bidet - 坐浴盆  
+47. Billboard - 广告牌  
+48. Billiard table - 台球桌  
+49. Binoculars - 双筒望远镜  
+50. Bird - 鸟  
+51. Blender - 搅拌机  
+52. Blue jay - 蓝松鸦  
+53. Boat - 船  
+54. Bomb - 炸弹  
+55. Book - 书  
+56. Bookcase - 书柜  
+57. Boot - 靴子  
+58. Bottle - 瓶子  
+59. Bottle opener - 开瓶器  
+60. Bow and arrow - 弓箭  
+61. Bowl - 碗  
+62. Bowling equipment - 保龄球设备  
+63. Box - 盒子  
+64. Boy - 男孩  
+65. Brassiere - 胸罩  
+66. Bread - 面包  
+67. Briefcase - 公文包  
+68. Broccoli - 西兰花  
+69. Bronze sculpture - 青铜雕塑  
+70. Brown bear - 棕熊  
+71. Building - 建筑物  
+72. Bull - 公牛  
+73. Burrito - 墨西哥卷饼  
+74. Bus - 公交车  
+75. Bust - 半身像  
+76. Butterfly - 蝴蝶  
+77. Cabbage - 卷心菜  
+78. Cabinetry - 橱柜  
+79. Cake - 蛋糕  
+80. Cake stand - 蛋糕架  
+81. Calculator - 计算器  
+82. Camel - 骆驼  
+83. Camera - 相机  
+84. Can opener - 开罐器  
+85. Canary - 金丝雀  
+86. Candle - 蜡烛  
+87. Candy - 糖果  
+88. Cannon - 大炮  
+89. Canoe - 独木舟  
+90. Cantaloupe - 哈密瓜  
+91. Car - 汽车  
+92. Carnivore - 食肉动物  
+93. Carrot - 胡萝卜  
+94. Cart - 手推车  
+95. Cassette deck - 卡带播放器  
+96. Castle - 城堡  
+97. Cat - 猫  
+98. Cat furniture - 猫家具  
+99. Caterpillar - 毛毛虫  
+100. Cattle - 牛  
+101. Ceiling fan - 吊扇  
+102. Cello - 大提琴  
+103. Centipede - 蜈蚣  
+104. Chainsaw - 链锯  
+105. Chair - 椅子  
+106. Cheese - 奶酪  
+107. Cheetah - 猎豹  
+108. Chest of drawers - 五斗柜  
+109. Chicken - 鸡  
+110. Chime - 风铃  
+111. Chisel - 凿子  
+112. Chopsticks - 筷子  
+113. Christmas tree - 圣诞树  
+114. Clock - 时钟  
+115. Closet - 衣柜  
+116. Clothing - 服装  
+117. Coat - 外套  
+118. Cocktail - 鸡尾酒  
+119. Cocktail shaker - 调酒器  
+120. Coconut - 椰子  
+121. Coffee (drink) - 咖啡（饮料）  
+122. Coffee cup - 咖啡杯  
+123. Coffee table - 咖啡桌  
+124. Coffeemaker - 咖啡机  
+125. Coin - 硬币  
+126. Common fig - 无花果  
+127. Common sunflower - 向日葵  
+128. Computer keyboard - 电脑键盘  
+129. Computer monitor - 电脑显示器  
+130. Computer mouse - 电脑鼠标  
+131. Container - 容器  
+132. Convenience store - 便利店  
+133. Cookie - 饼干  
+134. Cooking spray - 烹饪喷雾  
+135. Corded phone - 有线电话  
+136. Cosmetics - 化妆品  
+137. Couch - 沙发  
+138. Countertop - 台面  
+139. Cowboy hat - 牛仔帽  
+140. Crab - 螃蟹  
+141. Cream - 奶油  
+142. Cricket ball - 板球  
+143. Crocodile - 鳄鱼  
+144. Croissant - 牛角面包  
+145. Crown - 皇冠  
+146. Crutch - 拐杖  
+147. Cucumber - 黄瓜  
+148. Cupboard - 碗柜  
+149. Curtain - 窗帘  
+150. Cutting board - 砧板  
+151. Dagger - 匕首  
+152. Dairy Product - 乳制品  
+153. Deer - 鹿  
+154. Desk - 书桌  
+155. Dessert - 甜点  
+156. Diaper - 尿布  
+157. Dice - 骰子  
+158. Digital clock - 电子钟  
+159. Dinosaur - 恐龙  
+160. Dishwasher - 洗碗机  
+161. Dog - 狗  
+162. Dog bed - 狗床  
+163. Doll - 玩偶  
+164. Dolphin - 海豚  
+165. Door - 门  
+166. Door handle - 门把手  
+167. Doughnut - 甜甜圈  
+168. Dragonfly - 蜻蜓  
+169. Drawer - 抽屉  
+170. Dress - 连衣裙  
+171. Drill (Tool) - 电钻（工具）  
+172. Drink - 饮料  
+173. Drinking straw - 吸管  
+174. Drum - 鼓  
+175. Duck - 鸭子  
+176. Dumbbell - 哑铃  
+177. Eagle - 鹰  
+178. Earring - 耳环  
+179. Egg - 鸡蛋  
+180. Elephant - 大象  
+181. Envelope - 信封  
+182. Eraser - 橡皮擦  
+183. Face powder - 散粉  
+184. Facial tissue holder - 纸巾盒  
+185. Falcon - 猎鹰  
+186. Fashion accessory - 时尚配饰  
+187. Fast food - 快餐  
+188. Fax - 传真机  
+189. Fedora - 软呢帽  
+190. Filing cabinet - 文件柜  
+191. Fire hydrant - 消防栓  
+192. Fireplace - 壁炉  
+193. Fish - 鱼  
+194. Fixed-wing aircraft - 固定翼飞机  
+195. Flag - 旗帜  
+196. Flashlight - 手电筒  
+197. Flower - 花  
+198. Flowerpot - 花盆  
+199. Flute - 长笛  
+200. Flying disc - 飞盘  
+201. Food - 食物  
+202. Food processor - 食物处理器  
+203. Football - 橄榄球  
+204. Football helmet - 橄榄球头盔  
+205. Footwear - 鞋类  
+206. Fork - 叉子  
+207. Fountain - 喷泉  
+208. Fox - 狐狸  
+209. French fries - 薯条  
+210. French horn - 圆号  
+211. Frog - 青蛙  
+212. Fruit - 水果  
+213. Frying pan - 煎锅  
+214. Furniture - 家具  
+215. Garden Asparagus - 芦笋  
+216. Gas stove - 燃气灶  
+217. Giraffe - 长颈鹿  
+218. Girl - 女孩  
+219. Glasses - 眼镜  
+220. Glove - 手套  
+221. Goat - 山羊  
+222. Goggles - 护目镜  
+223. Goldfish - 金鱼  
+224. Golf ball - 高尔夫球  
+225. Golf cart - 高尔夫球车  
+226. Gondola - 贡多拉  
+227. Goose - 鹅  
+228. Grape - 葡萄  
+229. Grapefruit - 葡萄柚  
+230. Grinder - 研磨机  
+231. Guacamole - 鳄梨酱  
+232. Guitar - 吉他  
+233. Hair dryer - 吹风机  
+234. Hair spray - 发胶  
+235. Hamburger - 汉堡包  
+236. Hammer - 锤子  
+237. Hamster - 仓鼠  
+238. Hand dryer - 干手器  
+239. Handbag - 手提包  
+240. Handgun - 手枪  
+241. Harbor seal - 斑海豹  
+242. Harmonica - 口琴  
+243. Harp - 竖琴  
+244. Harpsichord - 大键琴  
+245. Hat - 帽子  
+246. Headphones - 耳机  
+247. Heater - 加热器  
+248. Hedgehog - 刺猬  
+249. Helicopter - 直升机  
+250. Helmet - 头盔  
+251. High heels - 高跟鞋  
+252. Hiking equipment - 徒步装备  
+253. Hippopotamus - 河马  
+254. Home appliance - 家用电器  
+255. Honeycomb - 蜂巢  
+256. Horizontal bar - 单杠  
+257. Horse - 马  
+258. Hot dog - 热狗  
+259. House - 房屋  
+260. Houseplant - 室内植物  
+261. Human arm - 人类手臂  
+262. Human body - 人体  
+263. Human ear - 人耳  
+264. Human eye - 人眼  
+265. Human face - 人脸  
+266. Human foot - 人脚  
+267. Human hair - 人类头发  
+268. Human hand - 人手  
+269. Human head - 人头  
+270. Human leg - 人腿  
+271. Human mouth - 人嘴  
+272. Human nose - 人鼻  
+273. Humidifier - 加湿器  
+274. Ice cream - 冰淇淋  
+275. Indoor rower - 划船机  
+276. Infant bed - 婴儿床  
+277. Insect - 昆虫  
+278. Invertebrate - 无脊椎动物  
+279. Ipod - iPod  
+280. Isopod - 等足类动物  
+281. Jacket - 夹克  
+282. Jacuzzi - 按摩浴缸  
+283. Jaguar (Animal) - 美洲豹（动物）  
+284. Jeans - 牛仔裤  
+285. Jellyfish - 水母  
+286. Jet ski - 水上摩托  
+287. Jug - 水壶  
+288. Juice - 果汁  
+289. Kangaroo - 袋鼠  
+290. Kettle - 水壶  
+291. Kitchen & dining room table - 厨房及餐桌  
+292. Kitchen appliance - 厨房电器  
+293. Kitchen knife - 厨房刀  
+294. Kitchen utensil - 厨房用具  
+295. Kitchenware - 厨具  
+296. Kite - 风筝  
+297. Knife - 刀  
+298. Koala - 考拉  
+299. Ladder - 梯子  
+300. Ladle - 长柄勺  
+301. Ladybug - 瓢虫  
+302. Lamp - 灯  
+303. Land vehicle - 陆地车辆  
+304. Lantern - 灯笼  
+305. Laptop - 笔记本电脑  
+306. Lavender (Plant) - 薰衣草（植物）  
+307. Lemon (plant) - 柠檬（植物）  
+308. Leopard - 豹  
+309. Light bulb - 灯泡  
+310. Light switch - 电灯开关  
+311. Lighthouse - 灯塔  
+312. Lily - 百合  
+313. Limousine - 豪华轿车  
+314. Lion - 狮子  
+315. Lipstick - 口红  
+316. Lizard - 蜥蜴  
+317. Lobster - 龙虾  
+318. Loveseat - 双人沙发  
+319. Luggage and bags - 行李和包  
+320. Lynx - 猞猁  
+321. Magpie - 喜鹊  
+322. Mammal - 哺乳动物  
+323. Man - 男人  
+324. Mango - 芒果  
+325. Maple - 枫树  
+326. Maraca - 沙锤  
+327. Marine invertebrates - 海洋无脊椎动物  
+328. Marine mammal - 海洋哺乳动物  
+329. Measuring cup - 量杯  
+330. Mechanical fan - 机械风扇  
+331. Medical equipment - 医疗设备  
+332. Microphone - 麦克风  
+333. Microwave oven - 微波炉  
+334. Milk - 牛奶  
+335. Miniskirt - 迷你裙  
+336. Mirror - 镜子  
+337. Missile - 导弹  
+338. Mixer - 搅拌器  
+339. Mixing bowl - 搅拌碗  
+340. Mobile phone - 手机  
+341. Monkey - 猴子  
+342. Moths and butterflies - 蛾与蝴蝶  
+343. Motorcycle - 摩托车  
+344. Mouse - 鼠标  
+345. Muffin - 马芬蛋糕  
+346. Mug - 马克杯  
+347. Mule - 骡子  
+348. Mushroom - 蘑菇  
+349. Musical instrument - 乐器  
+350. Musical keyboard - 电子琴  
+351. Nail (Construction) - 钉子（建筑）  
+352. Necklace - 项链  
+353. Nightstand - 床头柜  
+354. Oboe - 双簧管  
+355. Office building - 办公楼  
+356. Office supplies - 办公用品  
+357. Orange (fruit) - 橙子（水果）  
+358. Organ (Musical Instrument) - 管风琴（乐器）  
+359. Ostrich - 鸵鸟  
+360. Otter - 水獭  
+361. Oven - 烤箱  
+362. Owl - 猫头鹰  
+363. Oyster - 牡蛎  
+364. Paddle - 桨  
+365. Palm tree - 棕榈树  
+366. Pancake - 煎饼  
+367. Panda - 熊猫  
+368. Paper cutter - 裁纸刀  
+369. Paper towel - 纸巾  
+370. Parachute - 降落伞  
+371. Parking meter - 停车计时器  
+372. Parrot - 鹦鹉  
+373. Pasta - 意大利面  
+374. Pastry - 酥皮点心  
+375. Peach - 桃子  
+376. Pear - 梨  
+377. Pen - 钢笔  
+378. Pencil case - 铅笔盒  
+379. Pencil sharpener - 卷笔刀  
+380. Penguin - 企鹅  
+381. Perfume - 香水  
+382. Person - 人  
+383. Personal care - 个人护理  
+384. Personal flotation device - 个人漂浮装置  
+385. Piano - 钢琴  
+386. Picnic basket - 野餐篮  
+387. Picture frame - 相框  
+388. Pig - 猪  
+389. Pillow - 枕头  
+390. Pineapple - 菠萝  
+391. Pitcher (Container) - 水罐（容器）  
+392. Pizza - 披萨  
+393. Pizza cutter - 披萨刀  
+394. Plant - 植物  
+395. Plastic bag - 塑料袋  
+396. Plate - 盘子  
+397. Platter - 大浅盘  
+398. Plumbing fixture - 管道装置  
+399. Polar bear - 北极熊  
+400. Pomegranate - 石榴  
+401. Popcorn - 爆米花  
+402. Porch - 门廊  
+403. Porcupine - 豪猪  
+404. Poster - 海报  
+405. Potato - 土豆  
+406. Power plugs and sockets - 电源插头和插座  
+407. Pressure cooker - 压力锅  
+408. Pretzel - 椒盐脆饼  
+409. Printer - 打印机  
+410. Pumpkin - 南瓜  
+411. Punching bag - 沙袋  
+412. Rabbit - 兔子  
+413. Raccoon - 浣熊  
+414. Racket - 球拍  
+415. Radish - 萝卜  
+416. Ratchet (Device) - 棘轮（工具）  
+417. Raven - 乌鸦  
+418. Rays and skates - 鳐鱼和魟鱼  
+419. Red panda - 小熊猫  
+420. Refrigerator - 冰箱  
+421. Remote control - 遥控器  
+422. Reptile - 爬行动物  
+423. Rhinoceros - 犀牛  
+424. Rifle - 步枪  
+425. Ring binder - 活页夹  
+426. Rocket - 火箭  
+427. Roller skates - 轮滑鞋  
+428. Rose - 玫瑰  
+429. Rugby ball - 橄榄球  
+430. Ruler - 尺子  
+431. Salad - 沙拉  
+432. Salt and pepper shakers - 盐和胡椒瓶  
+433. Sandal - 凉鞋  
+434. Sandwich - 三明治  
+435. Saucer - 茶碟  
+436. Saxophone - 萨克斯风  
+437. Scale - 秤  
+438. Scarf - 围巾  
+439. Scissors - 剪刀  
+440. Scoreboard - 记分牌  
+441. Scorpion - 蝎子  
+442. Screwdriver - 螺丝刀  
+443. Sculpture - 雕塑  
+444. Sea lion - 海狮  
+445. Sea turtle - 海龟  
+446. Seafood - 海鲜  
+447. Seahorse - 海马  
+448. Seat belt - 安全带  
+449. Segway - 平衡车  
+450. Serving tray - 托盘  
+451. Sewing machine - 缝纫机  
+452. Shark - 鲨鱼  
+453. Sheep - 绵羊  
+
+
+以下是编号454至601的中英文双语对照列表，格式为 **编号. 英文 - 中文**：
+
+---
+
+454. Shelf - 架子  
+455. Shellfish - 贝类  
+456. Shirt - 衬衫  
+457. Shorts - 短裤  
+458. Shotgun - 猎枪  
+459. Shower - 淋浴器  
+460. Shrimp - 虾  
+461. Sink - 水槽  
+462. Skateboard - 滑板  
+463. Ski - 滑雪板  
+464. Skirt - 裙子  
+465. Skull - 头骨  
+466. Skunk - 臭鼬  
+467. Skyscraper - 摩天大楼  
+468. Slow cooker - 慢炖锅  
+469. Snack - 零食  
+470. Snail - 蜗牛  
+471. Snake - 蛇  
+472. Snowboard - 单板滑雪板  
+473. Snowman - 雪人  
+474. Snowmobile - 雪地摩托  
+475. Snowplow - 扫雪机  
+476. Soap dispenser - 皂液器  
+477. Sock - 袜子  
+478. Sofa bed - 沙发床  
+479. Sombrero - 墨西哥宽边帽  
+480. Sparrow - 麻雀  
+481. Spatula - 锅铲  
+482. Spice rack - 香料架  
+483. Spider - 蜘蛛  
+484. Spoon - 勺子  
+485. Sports equipment - 运动器材  
+486. Sports uniform - 运动服  
+487. Squash (Plant) - 南瓜（植物）  
+488. Squid - 鱿鱼  
+489. Squirrel - 松鼠  
+490. Stairs - 楼梯  
+491. Stapler - 订书机  
+492. Starfish - 海星  
+493. Stationary bicycle - 健身自行车  
+494. Stethoscope - 听诊器  
+495. Stool - 凳子  
+496. Stop sign - 停止标志  
+497. Strawberry - 草莓  
+498. Street light - 路灯  
+499. Stretcher - 担架  
+500. Studio couch - 沙发床  
+501. Submarine - 潜水艇  
+502. Submarine sandwich - 潜艇三明治  
+503. Suit - 西装  
+504. Suitcase - 行李箱  
+505. Sun hat - 遮阳帽  
+506. Sunglasses - 太阳镜  
+507. Surfboard - 冲浪板  
+508. Sushi - 寿司  
+509. Swan - 天鹅  
+510. Swim cap - 泳帽  
+511. Swimming pool - 游泳池  
+512. Swimwear - 泳装  
+513. Sword - 剑  
+514. Syringe - 注射器  
+515. Table - 桌子  
+516. Table tennis racket - 乒乓球拍  
+517. Tablet computer - 平板电脑  
+518. Tableware - 餐具  
+519. Taco - 墨西哥卷饼  
+520. Tank - 坦克  
+521. Tap - 水龙头  
+522. Tart - 果馅饼  
+523. Taxi - 出租车  
+524. Tea - 茶  
+525. Teapot - 茶壶  
+526. Teddy bear - 泰迪熊  
+527. Telephone - 电话  
+528. Television - 电视  
+529. Tennis ball - 网球  
+530. Tennis racket - 网球拍  
+531. Tent - 帐篷  
+532. Tiara - 头冠  
+533. Tick - 蜱虫  
+534. Tie - 领带  
+535. Tiger - 老虎  
+536. Tin can - 锡罐  
+537. Tire - 轮胎  
+538. Toaster - 烤面包机  
+539. Toilet - 马桶  
+540. Toilet paper - 卫生纸  
+541. Tomato - 番茄  
+542. Tool - 工具  
+543. Toothbrush - 牙刷  
+544. Torch - 手电筒  
+545. Tortoise - 陆龟  
+546. Towel - 毛巾  
+547. Tower - 塔  
+548. Toy - 玩具  
+549. Traffic light - 交通信号灯  
+550. Traffic sign - 交通标志  
+551. Train - 火车  
+552. Training bench - 训练凳  
+553. Treadmill - 跑步机  
+554. Tree - 树  
+555. Tree house - 树屋  
+556. Tripod - 三脚架  
+557. Trombone - 长号  
+558. Trousers - 裤子  
+559. Truck - 卡车  
+560. Trumpet - 小号  
+561. Turkey - 火鸡  
+562. Turtle - 龟  
+563. Umbrella - 雨伞  
+564. Unicycle - 独轮车  
+565. Van - 厢式货车  
+566. Vase - 花瓶  
+567. Vegetable - 蔬菜  
+568. Vehicle - 车辆  
+569. Vehicle registration plate - 车牌  
+570. Violin - 小提琴  
+571. Volleyball (Ball) - 排球（球）  
+572. Waffle - 华夫饼  
+573. Waffle iron - 华夫饼机  
+574. Wall clock - 挂钟  
+575. Wardrobe - 衣柜  
+576. Washing machine - 洗衣机  
+577. Waste container - 垃圾桶  
+578. Watch - 手表  
+579. Watercraft - 船只  
+580. Watermelon - 西瓜  
+581. Weapon - 武器  
+582. Whale - 鲸鱼  
+583. Wheel - 轮子  
+584. Wheelchair - 轮椅  
+585. Whisk - 打蛋器  
+586. Whiteboard - 白板  
+587. Willow - 柳树  
+588. Window - 窗户  
+589. Window blind - 百叶窗  
+590. Wine - 葡萄酒  
+591. Wine glass - 酒杯  
+592. Wine rack - 酒架  
+593. Winter melon - 冬瓜  
+594. Wok - 炒锅  
+595. Woman - 女人  
+596. Wood-burning stove - 柴火炉  
+597. Woodpecker - 啄木鸟  
+598. Worm - 蠕虫  
+599. Wrench - 扳手  
+600. Zebra - 斑马  
+601. Zucchini - 西葫芦  

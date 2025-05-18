@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <!-- Tech theme - 科技感主题 -->
+    <style name="TechTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- 基础色彩 -->
+        <item name="colorPrimary">@color/tech_accent_blue</item>
+        <item name="colorPrimaryDark">@color/tech_dark_surface</item>
+        <item name="colorAccent">@color/tech_accent_teal</item>
+        
+        <!-- 状态栏和窗口配置 -->
+        <item name="android:statusBarColor">@color/tech_background</item>
+        <item name="android:windowBackground">@color/tech_background</item>
+        <item name="android:navigationBarColor">@color/tech_background</item>
+        
+        <!-- Material 组件样式覆盖 -->
+        <item name="materialButtonStyle">@style/TechButton</item>
+        <item name="chipStyle">@style/TechChip</item>
+        <item name="radioButtonStyle">@style/TechRadioButton</item>
+        <item name="materialCardViewStyle">@style/TechCard</item>
+        
+        <!-- 文本样式 -->
+        <item name="android:textColorPrimary">@color/tech_text_primary</item>
+        <item name="android:textColorSecondary">@color/tech_text_secondary</item>
+        
+        <!-- 分隔线颜色 - Removed as it causes errors -->
+        <!-- <item name="android:dividerColor">@color/tech_divider</item> -->
+    </style>
+    
+    <!-- 科技感按钮样式 -->
+    <style name="TechButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/tech_accent_blue</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <!-- 科技感Chip样式 -->
+    <style name="TechChip" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/tech_chip_unselected</item>
+        <item name="android:textColor">@color/tech_text_primary</item>
+        <item name="chipStrokeColor">@color/tech_accent_blue</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="rippleColor">@color/tech_accent_blue</item>
+        <item name="checkedIconTint">@color/tech_text_primary</item>
+    </style>
+    
+    <!-- 科技感RadioButton样式 -->
+    <style name="TechRadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/tech_accent_blue</item>
+        <item name="android:textColor">@color/tech_text_primary</item>
+    </style>
+    
+    <!-- 科技感Card样式 -->
+    <style name="TechCard" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/tech_surface</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="contentPadding">16dp</item>
+        <item name="strokeColor">@color/tech_divider</item>
+        <item name="strokeWidth">0.5dp</item>
+    </style>
+
+    <!-- Custom Styles for Settings Screen -->
+    <style name="Widget.App.CardView.SettingsItem" parent="Widget.Material3.CardView.Outlined">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="cardBackgroundColor">@color/tech_surface_dark</item>
+        <item name="strokeColor">@color/tech_accent_transparent</item>
+    </style>
+
+    <style name="Widget.App.LinearLayout.SettingsItemContent" parent="">
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <style name="Widget.App.TextView.SettingsLabel" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.TitleMedium</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.App.TextView.SettingsValue" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.BodyMedium</item>
+        <item name="android:textColor">@color/tech_primary</item>
+    </style>
+
+    <style name="Widget.App.TextView.SettingsDescription" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.BodySmall</item>
+        <item name="android:textColor">@color/material_on_surface_emphasis_medium</item>
+    </style>
+
+    <!-- Add Help Dialog Styles -->
+    <style name="HelpSectionHeader">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#FF00E5FF</item> <!-- Tech Cyan -->
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/tech_section_header_bg</item> <!-- Assuming this drawable exists -->
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="HelpSectionContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#FFE0E0E0</item> <!-- Light Gray -->
+        <item name="android:textSize">13sp</item>
+        <item name="android:background">#FF0A1526</item> <!-- Dark Blue Background -->
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+</resources> 

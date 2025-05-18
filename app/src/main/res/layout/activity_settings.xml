@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/tech_background_dark"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:id="@+id/textViewSettingsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_title"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+        android:textColor="@color/tech_text_primary_dark"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 添加说明卡片 -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewTrackingExplanation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="12dp"
+        app:cardBackgroundColor="@color/tech_surface_dark"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:strokeColor="@color/tech_accent_blue_dark"
+        app:strokeWidth="1dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewSettingsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="参数说明"
+                android:textColor="@color/tech_primary_dark"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/tech_text_secondary_dark"
+                android:textSize="14sp"
+                android:text="• IoU阈值：值越高，目标匹配要求越严格，适合静止场景；值越低，匹配更宽松，适合快速移动场景。\n\n• 最大追踪时长：值越大，目标暂时遮挡后仍能保持ID，但可能造成误跟踪；值越小，目标消失后快速释放ID。\n\n• 最小命中次数：值越大，新目标确认越严格，抗干扰能力强；值越小，新目标快速确认，但可能误跟踪。\n\n• 卡尔曼过程噪声：值越大，预测更依赖新测量值；值越小，预测更平滑但对突变反应慢。\n\n• 卡尔曼测量噪声：值越大，对检测结果信任度低；值越小，跟踪更紧跟检测结果。"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/cardViewTrackingExplanation"
+        app:layout_constraintBottom_toTopOf="@id/buttonSaveSettings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- IoU Threshold -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView.SettingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout style="@style/Widget.App.LinearLayout.SettingsItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textViewIouThresholdLabel"
+                        style="@style/Widget.App.TextView.SettingsLabel"
+                        android:text="@string/iou_threshold_label" />
+                    <TextView
+                        android:id="@+id/textViewIouThresholdValue"
+                        style="@style/Widget.App.TextView.SettingsValue"
+                        android:layout_gravity="end"
+                        tools:text="0.30" />
+                    <SeekBar
+                        android:id="@+id/seekBarIouThreshold"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="100"
+                        android:progress="30"
+                        android:progressTint="@color/tech_primary_dark"
+                        android:thumbTint="@color/tech_primary_dark"
+                        android:progressBackgroundTint="@color/tech_surface_variant_dark"
+                        android:layout_marginTop="4dp" />
+                    <TextView
+                        style="@style/Widget.App.TextView.SettingsDescription"
+                        android:text="@string/iou_threshold_description" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Max Age -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView.SettingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout style="@style/Widget.App.LinearLayout.SettingsItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textViewMaxAgeLabel"
+                        style="@style/Widget.App.TextView.SettingsLabel"
+                        android:text="@string/max_age_label" />
+                     <com.google.android.material.textfield.TextInputLayout
+                         style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="4dp"
+                         app:hintTextColor="@color/tech_text_secondary_dark"
+                         app:boxStrokeColor="@color/tech_primary_dark"
+                         app:hintEnabled="false">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextMaxAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:textColor="@color/tech_text_primary_dark"
+                            android:textColorHint="@color/tech_text_hint_dark"
+                            tools:text="30" />
+                     </com.google.android.material.textfield.TextInputLayout>
+                    <TextView
+                        style="@style/Widget.App.TextView.SettingsDescription"
+                        android:text="@string/max_age_description" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Min Hits -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView.SettingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout style="@style/Widget.App.LinearLayout.SettingsItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textViewMinHitsLabel"
+                        style="@style/Widget.App.TextView.SettingsLabel"
+                        android:text="@string/min_hits_label" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        app:hintTextColor="@color/tech_text_secondary_dark"
+                        app:boxStrokeColor="@color/tech_primary_dark"
+                        app:hintEnabled="false">
+                        <com.google.android.material.textfield.TextInputEditText
+                           android:id="@+id/editTextMinHits"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:inputType="number"
+                           android:textColor="@color/tech_text_primary_dark"
+                           android:textColorHint="@color/tech_text_hint_dark"
+                           tools:text="3" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                   <TextView
+                       style="@style/Widget.App.TextView.SettingsDescription"
+                       android:text="@string/min_hits_description" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Kalman Process Noise -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView.SettingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout style="@style/Widget.App.LinearLayout.SettingsItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textViewKalmanProcessNoiseLabel"
+                        style="@style/Widget.App.TextView.SettingsLabel"
+                        android:text="@string/kalman_process_noise_label" />
+                    <TextView
+                        android:id="@+id/textViewKalmanProcessNoiseValue"
+                        style="@style/Widget.App.TextView.SettingsValue"
+                        android:layout_gravity="end"
+                        tools:text="1e-3" />
+                    <SeekBar
+                        android:id="@+id/seekBarKalmanProcessNoise"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="600"
+                        android:progress="300"
+                        android:progressTint="@color/tech_primary_dark"
+                        android:thumbTint="@color/tech_primary_dark"
+                        android:progressBackgroundTint="@color/tech_surface_variant_dark"
+                        android:layout_marginTop="4dp" />
+                    <TextView
+                        style="@style/Widget.App.TextView.SettingsDescription"
+                        android:text="@string/kalman_process_noise_description" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Kalman Measurement Noise -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView.SettingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout style="@style/Widget.App.LinearLayout.SettingsItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textViewKalmanMeasurementNoiseLabel"
+                        style="@style/Widget.App.TextView.SettingsLabel"
+                        android:text="@string/kalman_measurement_noise_label" />
+                    <TextView
+                        android:id="@+id/textViewKalmanMeasurementNoiseValue"
+                        style="@style/Widget.App.TextView.SettingsValue"
+                        android:layout_gravity="end"
+                        tools:text="1e-2" />
+                    <SeekBar
+                        android:id="@+id/seekBarKalmanMeasurementNoise"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="600"
+                        android:progress="400"
+                        android:progressTint="@color/tech_primary_dark"
+                        android:thumbTint="@color/tech_primary_dark"
+                        android:progressBackgroundTint="@color/tech_surface_variant_dark"
+                        android:layout_marginTop="4dp" />
+                    <TextView
+                        style="@style/Widget.App.TextView.SettingsDescription"
+                        android:text="@string/kalman_measurement_noise_description" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Enable Mask Tracking -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView.SettingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout style="@style/Widget.App.LinearLayout.SettingsItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchEnableMaskTracking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/enable_mask_tracking_label"
+                        android:textColor="@color/tech_text_primary_dark"
+                        android:checked="true"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        app:thumbTint="@color/switch_thumb_selector"
+                        app:trackTint="@color/switch_track_selector" />
+                     <TextView
+                         style="@style/Widget.App.TextView.SettingsDescription"
+                         android:layout_marginTop="4dp"
+                         android:text="@string/enable_mask_tracking_description" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Enable Trajectory Visualization -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView.SettingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout style="@style/Widget.App.LinearLayout.SettingsItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchEnableTrajectoryViz"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="启用轨迹可视化"
+                        android:textColor="@color/tech_text_primary_dark"
+                        android:checked="false"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        app:thumbTint="@color/switch_thumb_selector"
+                        app:trackTint="@color/switch_track_selector" />
+                    <TextView
+                        style="@style/Widget.App.TextView.SettingsDescription"
+                        android:layout_marginTop="4dp"
+                        android:text="开启后将可视化目标的未来轨迹预测，帮助分析目标移动模式。" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Trajectory Length -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView.SettingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout style="@style/Widget.App.LinearLayout.SettingsItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textViewTrajectoryLengthLabel"
+                        style="@style/Widget.App.TextView.SettingsLabel"
+                        android:text="轨迹长度" />
+                    <TextView
+                        android:id="@+id/textViewTrajectoryLengthValue"
+                        style="@style/Widget.App.TextView.SettingsValue"
+                        android:layout_gravity="end"
+                        tools:text="20" />
+                    <SeekBar
+                        android:id="@+id/seekBarTrajectoryLength"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="50"
+                        android:progress="20"
+                        android:progressTint="@color/tech_primary_dark"
+                        android:thumbTint="@color/tech_primary_dark"
+                        android:progressBackgroundTint="@color/tech_surface_variant_dark"
+                        android:layout_marginTop="4dp" />
+                    <TextView
+                        style="@style/Widget.App.TextView.SettingsDescription"
+                        android:text="调整预测轨迹的显示长度，值越大预测越远。" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Trajectory Thickness -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView.SettingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout style="@style/Widget.App.LinearLayout.SettingsItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textViewTrajectoryThicknessLabel"
+                        style="@style/Widget.App.TextView.SettingsLabel"
+                        android:text="轨迹粗细" />
+                    <TextView
+                        android:id="@+id/textViewTrajectoryThicknessValue"
+                        style="@style/Widget.App.TextView.SettingsValue"
+                        android:layout_gravity="end"
+                        tools:text="2.0" />
+                    <SeekBar
+                        android:id="@+id/seekBarTrajectoryThickness"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="90"
+                        android:progress="30"
+                        android:progressTint="@color/tech_primary_dark"
+                        android:thumbTint="@color/tech_primary_dark"
+                        android:progressBackgroundTint="@color/tech_surface_variant_dark"
+                        android:layout_marginTop="4dp" />
+                    <TextView
+                        style="@style/Widget.App.TextView.SettingsDescription"
+                        android:text="调整轨迹线条的粗细，范围0.5-5.0。" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Trajectory Color Mode -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView.SettingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout style="@style/Widget.App.LinearLayout.SettingsItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textViewTrajectoryColorModeLabel"
+                        style="@style/Widget.App.TextView.SettingsLabel"
+                        android:text="轨迹颜色模式" />
+                    <TextView
+                        android:id="@+id/textViewTrajectoryColorModeValue"
+                        style="@style/Widget.App.TextView.SettingsValue"
+                        android:layout_gravity="end"
+                        tools:text="单色" />
+                    <SeekBar
+                        android:id="@+id/seekBarTrajectoryColorMode"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="2"
+                        android:progress="0"
+                        android:progressTint="@color/tech_primary_dark"
+                        android:thumbTint="@color/tech_primary_dark"
+                        android:progressBackgroundTint="@color/tech_surface_variant_dark"
+                        android:layout_marginTop="4dp" />
+                    <TextView
+                        style="@style/Widget.App.TextView.SettingsDescription"
+                        android:text="选择轨迹的颜色模式：单色、渐变或彩虹色。" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 跟踪模式选择 -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView.SettingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+                <LinearLayout style="@style/Widget.App.LinearLayout.SettingsItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textViewTrackingModeTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="跟踪模式选择"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                        android:textColor="@color/tech_primary_dark"
+                        android:gravity="center"
+                        android:layout_marginBottom="4dp"/>
+                    <RadioGroup
+                        android:id="@+id/radioGroupTrackingMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <RadioButton
+                            android:id="@+id/radioButtonStableMode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="稳定模式 (监控、三脚架等固定场景)"
+                            android:textColor="@color/tech_text_primary_dark"/>
+                        <RadioButton
+                            android:id="@+id/radioButtonHandheldMode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="手持模式 (手持拍摄、移动场景)"
+                            android:textColor="@color/tech_text_primary_dark"/>
+                        <RadioButton
+                            android:id="@+id/radioButtonCustomMode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="自定义模式 (手动设置参数)"
+                            android:textColor="@color/tech_text_primary_dark"/>
+                    </RadioGroup>
+                    <TextView
+                        style="@style/Widget.App.TextView.SettingsDescription"
+                        android:layout_marginTop="4dp"
+                        android:text="选择不同场景下的跟踪模式，系统将自动调整参数以优化跟踪效果" />
+
+                    <!--二级运动模式选择 (默认隐藏) -->
+                    <LinearLayout
+                        android:id="@+id/layoutMotionSubMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="目标运动模式 (预设)"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                            android:textColor="@color/tech_primary_dark"/>
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupMotionSubMode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="4dp">
+
+                            <RadioButton
+                                android:id="@+id/radioButtonMotionGeneral"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="通用 (默认)"
+                                android:textColor="@color/tech_text_primary_dark"/>
+                            <RadioButton
+                                android:id="@+id/radioButtonMotionStatic"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="静态"
+                                android:textColor="@color/tech_text_primary_dark"/>
+                            <RadioButton
+                                android:id="@+id/radioButtonMotionCV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="匀速运动"
+                                android:textColor="@color/tech_text_primary_dark"/>
+                            <RadioButton
+                                android:id="@+id/radioButtonMotionCA"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="加速运动"
+                                android:textColor="@color/tech_text_primary_dark"/>
+                            <RadioButton
+                                android:id="@+id/radioButtonMotionVariable"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="变速运动"
+                                android:textColor="@color/tech_text_primary_dark"/>
+                        </RadioGroup>
+                        <TextView
+                            style="@style/Widget.App.TextView.SettingsDescription"
+                            android:layout_marginTop="4dp"
+                            android:text="选择目标的典型运动模式以加载预设参数，您仍可微调。" />
+                    </LinearLayout>
+
+                    <!-- 空间分布模式选择 -->
+                    <LinearLayout
+                        android:id="@+id/layoutSpatialDistribution"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="16dp"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="空间分布模式 (预设)"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                            android:textColor="@color/tech_primary_dark"/>
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupSpatialDistribution"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="4dp">
+
+                            <RadioButton
+                                android:id="@+id/radioButtonSpatialNormal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="正常密度 (默认)"
+                                android:textColor="@color/tech_text_primary_dark"/>
+                            <RadioButton
+                                android:id="@+id/radioButtonSpatialSparse"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="稀疏场景"
+                                android:textColor="@color/tech_text_primary_dark"/>
+                            <RadioButton
+                                android:id="@+id/radioButtonSpatialDense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="密集场景"
+                                android:textColor="@color/tech_text_primary_dark"/>
+                            <RadioButton
+                                android:id="@+id/radioButtonSpatialVeryDense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="超密集场景"
+                                android:textColor="@color/tech_text_primary_dark"/>
+                        </RadioGroup>
+                        <TextView
+                            style="@style/Widget.App.TextView.SettingsDescription"
+                            android:layout_marginTop="4dp"
+                            android:text="根据场景中目标密集程度选择合适模式，影响跟踪参数优化方向。" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 连续跟踪模式标题 -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView.SettingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+                <LinearLayout style="@style/Widget.App.LinearLayout.SettingsItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textViewContinuousTrackingTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="连续跟踪模式设置"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                        android:textColor="@color/tech_primary_dark"
+                        android:gravity="center"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView
+                        style="@style/Widget.App.TextView.SettingsDescription"
+                        android:layout_marginTop="4dp"
+                        android:text="连续跟踪模式可以在目标短暂消失时仍然显示其预测轨迹，提高跟踪连贯性。" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Enable Continuous Tracking -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView.SettingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout style="@style/Widget.App.LinearLayout.SettingsItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchEnableContinuousTracking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="启用连续跟踪"
+                        android:textColor="@color/tech_text_primary_dark"
+                        android:checked="false"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        app:thumbTint="@color/switch_thumb_selector"
+                        app:trackTint="@color/switch_track_selector" />
+                    <TextView
+                        style="@style/Widget.App.TextView.SettingsDescription"
+                        android:layout_marginTop="4dp"
+                        android:text="开启后，目标短暂消失时仍会显示其预测轨迹，直到预测可信度低于阈值。" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Prediction Threshold -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView.SettingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout style="@style/Widget.App.LinearLayout.SettingsItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textViewPredictionThresholdLabel"
+                        style="@style/Widget.App.TextView.SettingsLabel"
+                        android:text="预测可信度阈值" />
+                    <TextView
+                        android:id="@+id/textViewPredictionThresholdValue"
+                        style="@style/Widget.App.TextView.SettingsValue"
+                        android:layout_gravity="end"
+                        tools:text="0.60" />
+                    <SeekBar
+                        android:id="@+id/seekBarPredictionThreshold"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="100"
+                        android:progress="60"
+                        android:progressTint="@color/tech_primary_dark"
+                        android:thumbTint="@color/tech_primary_dark"
+                        android:progressBackgroundTint="@color/tech_surface_variant_dark"
+                        android:layout_marginTop="4dp" />
+                    <TextView
+                        style="@style/Widget.App.TextView.SettingsDescription"
+                        android:text="当预测可信度低于此阈值时，将停止显示该目标轨迹。值越低，轨迹显示时间越长。" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Max Prediction Frames -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView.SettingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout style="@style/Widget.App.LinearLayout.SettingsItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textViewMaxPredictionFramesLabel"
+                        style="@style/Widget.App.TextView.SettingsLabel"
+                        android:text="最大预测帧数" />
+                    <TextView
+                        android:id="@+id/textViewMaxPredictionFramesValue"
+                        style="@style/Widget.App.TextView.SettingsValue"
+                        android:layout_gravity="end"
+                        tools:text="30" />
+                    <SeekBar
+                        android:id="@+id/seekBarMaxPredictionFrames"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="60"
+                        android:progress="30"
+                        android:progressTint="@color/tech_primary_dark"
+                        android:thumbTint="@color/tech_primary_dark"
+                        android:progressBackgroundTint="@color/tech_surface_variant_dark"
+                        android:layout_marginTop="4dp" />
+                    <TextView
+                        style="@style/Widget.App.TextView.SettingsDescription"
+                        android:text="目标消失后最多预测多少帧，超过此值将停止显示轨迹。" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Prediction Line Type -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView.SettingsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout style="@style/Widget.App.LinearLayout.SettingsItemContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textViewPredictionLineTypeLabel"
+                        style="@style/Widget.App.TextView.SettingsLabel"
+                        android:text="预测轨迹线型" />
+                    <TextView
+                        android:id="@+id/textViewPredictionLineTypeValue"
+                        style="@style/Widget.App.TextView.SettingsValue"
+                        android:layout_gravity="end"
+                        tools:text="虚线" />
+                    <SeekBar
+                        android:id="@+id/seekBarPredictionLineType"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="1"
+                        android:progress="0"
+                        android:progressTint="@color/tech_primary_dark"
+                        android:thumbTint="@color/tech_primary_dark"
+                        android:progressBackgroundTint="@color/tech_surface_variant_dark"
+                        android:layout_marginTop="4dp" />
+                    <TextView
+                        style="@style/Widget.App.TextView.SettingsDescription"
+                        android:text="选择预测轨迹的线型：虚线或实线，虚线可以直观区分预测与实际观测状态。" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSaveSettings"
+        style="@style/TechButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/save_settings_button"
+        android:textColor="@color/tech_background_dark"
+        android:backgroundTint="@color/tech_primary_dark"
+        app:cornerRadius="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!-- Define these styles in your styles.xml or themes.xml -->
+<!--
+<style name="Widget.App.CardView.SettingsItem" parent="Widget.Material3.CardView.Outlined">
+    <item name="android:layout_marginTop">8dp</item>
+    <item name="cardBackgroundColor">@color/tech_surface_dark</item>
+    <item name="strokeColor">@color/tech_accent_transparent</item>
+</style>
+
+<style name="Widget.App.LinearLayout.SettingsItemContent" parent="">
+    <item name="android:orientation">vertical</item>
+    <item name="android:padding">12dp</item>
+</style>
+
+<style name="Widget.App.TextView.SettingsLabel" parent="Widget.Material3.TextView">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textAppearance">@style/TextAppearance.Material3.TitleMedium</item>
+    <item name="android:textColor">@color/tech_text_primary_dark</item>
+</style>
+
+<style name="Widget.App.TextView.SettingsValue" parent="Widget.Material3.TextView">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textAppearance">@style/TextAppearance.Material3.BodyMedium</item>
+    <item name="android:textColor">@color/tech_primary_dark</item>
+</style>
+
+<style name="Widget.App.TextView.SettingsDescription" parent="Widget.Material3.TextView">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_marginTop">4dp</item>
+    <item name="android:textAppearance">@style/TextAppearance.Material3.BodySmall</item>
+    <item name="android:textColor">@color/tech_text_secondary_dark</item>
+</style>
+--> 

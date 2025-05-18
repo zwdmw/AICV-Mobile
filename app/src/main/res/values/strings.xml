@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <string name="app_name">ncnn-yolov8</string>-->
+    <string name="app_name">AICV-Mobile</string>
+    <string name="app_name_short">AICV-Mobile</string>
+    <string-array name="model_array">
+        <item>yolov8n</item>
+        <item>yolov8s</item>
+        <item>yolov8s-seg</item>
+    </string-array>
+    <string-array name="cpugpu_array">
+        <item>CPU</item>
+        <item>GPU</item>
+    </string-array>
+     <string-array name="draw_style_array">
+        <item>赛博格网格 (默认)</item>
+        <item>全息光影</item>
+        <item>经典标记</item>
+        <item>等离子流</item>
+        <item>数据流痕</item>
+        <item>锁定目标</item>
+        <item>脉冲断点</item>
+        <item>霓虹流光</item>
+        <item>数字矩阵</item>
+        <item>量子光谱</item>
+
+    </string-array>
+    
+    <!-- 每种风格的描述 -->
+    <string-array name="draw_style_descriptions">
+        <item>四角标记+箭头连接ID，适合一般检测场景</item>
+        <item>完整边框+浮动标签，适合展示</item>
+        <item>简约实线+尖角，适合密集场景</item>
+        <item>流动渐变+角点，适合运动目标</item>
+        <item>编号方框+ID标签，适合统计场景</item>
+        <item>十字准星+锁定图标，适合追踪关注</item>
+        <item>传统虚线框，适合低干扰视觉</item>
+        <item>明亮边缘+角点闪光，适合夜间或暗场景</item>
+        <item>双线框+扫描效果，适合技术场景</item>
+        <item>多色角点+渐变，适合高端展示</item>
+    </string-array>
+
+    <!-- Settings Screen Strings -->
+    <string name="settings_title">跟踪与显示设置</string>
+    <string name="iou_threshold_label">IoU 阈值</string>
+    <string name="iou_threshold_description">追踪器匹配检测框时使用的交并比阈值 (默认 0.3)</string>
+    <string name="max_age_label">最大追踪时长 (帧)</string>
+    <string name="max_age_description">目标丢失后保持追踪状态的最大帧数 (默认 30)</string>
+    <string name="min_hits_label">最小命中次数</string>
+    <string name="min_hits_description">目标被确认为有效追踪所需的最小连续检测次数 (默认 3)</string>
+    <string name="kalman_process_noise_label">卡尔曼过程噪声 (对数)</string>
+    <string name="kalman_process_noise_description">模型对目标运动预测的不确定性 (默认 1e-3)</string>
+    <string name="kalman_measurement_noise_label">卡尔曼测量噪声 (对数)</string>
+    <string name="kalman_measurement_noise_description">传感器测量位置的不确定性 (默认 1e-2)</string>
+    <string name="enable_mask_tracking_label">启用掩码跟踪</string>
+    <string name="enable_mask_tracking_description">使用分割掩码信息进行更精确的跟踪 (需要分割模型)</string>
+    <string name="save_settings_button">保存并应用</string>
+
+    <!-- 数据集类型 -->
+    <string name="dataset_coco">COCO数据集</string>
+    <string name="dataset_oiv">OIV数据集</string>
+    
+    <!-- 类别选择界面 -->
+    <string name="class_selection_title">类别选择</string>
+    <string name="all_classes">全部类别</string>
+    <string name="by_category">按类别</string>
+    <string name="specific_classes">指定类别</string>
+    <string name="select_category_instruction">先选择大类，然后在右侧选择具体小类</string>
+    <string name="select_specific_instruction">从所有类别中选择需要检测的类别</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="please_select_at_least_one">请至少选择一个具体类别</string>
+    
+    <!-- COCO数据集常用类别中文名称 -->
+    <string name="category_person">人</string>
+    <string name="category_bicycle">自行车</string>
+    <string name="category_car">汽车</string>
+    <string name="category_motorcycle">摩托车</string>
+    <string name="category_airplane">飞机</string>
+    <string name="category_bus">公共汽车</string>
+    <string name="category_train">火车</string>
+    <string name="category_truck">卡车</string>
+    <string name="category_boat">船</string>
+    <string name="category_traffic_light">红绿灯</string>
+    <string name="category_fire_hydrant">消防栓</string>
+    <string name="category_stop_sign">停止标志</string>
+    <string name="category_parking_meter">停车计时器</string>
+    <string name="category_bench">长凳</string>
+    <string name="category_bird">鸟</string>
+    <string name="category_cat">猫</string>
+    <string name="category_dog">狗</string>
+    <string name="category_horse">马</string>
+    <string name="category_sheep">羊</string>
+    <string name="category_cow">牛</string>
+    <string name="category_elephant">大象</string>
+    <string name="category_bear">熊</string>
+    <string name="category_zebra">斑马</string>
+    <string name="category_giraffe">长颈鹿</string>
+    
+    <!-- OIV数据集常用类别中文名称 - 人物与人体 -->
+    <string name="category_person_oiv">人</string>
+    <string name="category_man">男人</string>
+    <string name="category_woman">女人</string>
+    <string name="category_boy">男孩</string>
+    <string name="category_girl">女孩</string>
+    <string name="category_human_body">人体</string>
+    <string name="category_human_head">人头</string>
+    <string name="category_human_face">人脸</string>
+    <string name="category_human_eye">眼睛</string>
+    <string name="category_human_ear">耳朵</string>
+    <string name="category_human_nose">鼻子</string>
+    <string name="category_human_mouth">嘴巴</string>
+    <string name="category_human_hand">手</string>
+    <string name="category_human_arm">手臂</string>
+    <string name="category_human_foot">脚</string>
+    <string name="category_human_leg">腿</string>
+    <string name="category_human_hair">头发</string>
+    <string name="category_beard">胡子</string>
+    
+    <!-- OIV数据集常用类别中文名称 - 动物 -->
+    <string name="category_animal">动物</string>
+    <string name="category_mammal">哺乳动物</string>
+    <string name="category_bear_oiv">熊</string>
+    <string name="category_brown_bear">棕熊</string>
+    <string name="category_polar_bear">北极熊</string>
+    <string name="category_cat_oiv">猫</string>
+    <string name="category_dog_oiv">狗</string>
+    <string name="category_dog_bed">狗窝</string>
+    <string name="category_bull">公牛</string>
+    <string name="category_cattle">牛</string>
+    <string name="category_elephant_oiv">大象</string>
+    <string name="category_deer">鹿</string>
+    <string name="category_antelope">羚羊</string>
+    <string name="category_giraffe_oiv">长颈鹿</string>
+    <string name="category_zebra_oiv">斑马</string>
+    <string name="category_horse_oiv">马</string>
+    <string name="category_mule">骡子</string>
+    <string name="category_goat">山羊</string>
+    <string name="category_sheep_oiv">绵羊</string>
+    <string name="category_monkey">猴子</string>
+    <string name="category_panda">熊猫</string>
+    
+    <!-- OIV数据集常用类别中文名称 - 交通工具 -->
+    <string name="category_vehicle">车辆</string>
+    <string name="category_land_vehicle">陆地车辆</string>
+    <string name="category_car_oiv">汽车</string>
+    <string name="category_truck_oiv">卡车</string>
+    <string name="category_van">面包车</string>
+    <string name="category_bus_oiv">公交车</string>
+    <string name="category_ambulance">救护车</string>
+    <string name="category_taxi">出租车</string>
+    <string name="category_limousine">豪华轿车</string>
+    <string name="category_motorcycle_oiv">摩托车</string>
+    <string name="category_bicycle_oiv">自行车</string>
+    
+    <!-- 更多OIV类别可以根据需要添加 -->
+
+    <!-- Help Dialog Strings (Chinese - Default) -->
+    <string name="help_title">应用功能指南</string>
+    <string name="help_main_features_header">主要功能</string>
+    <string name="help_main_features_content">本应用基于YOLOv8目标检测技术与改进的OC-SORT跟踪算法(结合卡尔曼滤波)，能够实时识别和跟踪各类物体，支持多种视觉风格和自定义设置。采用NCNN框架加速，提供实例分割和高效目标跟踪功能。</string>
+    <string name="help_default_settings">默认配置: 启动时自动选择YOLOv8n-seg分割模型，检测阈值和掩码阈值均为0.30，运行设备设为GPU，视觉效果采用量子光谱风格。</string>
+    <string name="help_models_header">模型说明</string>
+    <string name="help_model_yolov8n">• YOLOv8n: 轻量级模型，速度最快，适合低配设备 (COCO 80类)</string>
+    <string name="help_model_yolov8s">• YOLOv8s: 小型模型，速度与精度平衡 (COCO 80类)</string>
+    <string name="help_model_yolov8m">• YOLOv8m: 中型模型，精度更高 (COCO 80类)</string>
+    <string name="help_model_yolov8n_seg">• YOLOv8n-seg: 轻量级分割模型，快速生成掩码</string>
+    <string name="help_model_yolov8s_seg">• YOLOv8s-seg: 小型分割模型，平衡速度与掩码质量</string>
+    <string name="help_model_yolov8m_seg">• YOLOv8m-seg: 中型分割模型，高质量掩码</string>
+    <string name="help_model_yolov8n_oiv7">• YOLOv8n-oiv7: 轻量级扩展模型 (OIV7 600+类)</string>
+    <string name="help_model_yolov8s_oiv7">• YOLOv8s-oiv7: 小型扩展模型 (OIV7 600+类)</string>
+    <string name="help_model_yolov8m_oiv7">• YOLOv8m-oiv7: 中型扩展模型 (OIV7 600+类)</string>
+    <string name="help_operation_guide_header">操作指南</string>
+    <string name="help_operation_guide_model">1. 模型选择: 顶部下拉菜单选择模型 (n: 快, m: 准, seg: 分割, oiv: 多类别)。</string>
+    <string name="help_operation_guide_mode">2. 运行模式: CPU (兼容) / GPU (快速)。</string>
+    <string name="help_operation_guide_style">3. 检测风格: 10种视觉风格可选，点击信息按钮可详细设置。</string>
+    <string name="help_operation_guide_det_thresh">4. 检测阈值 (0~1): 值越高越严格 (建议0.25~0.65)。</string>
+    <string name="help_operation_guide_mask_thresh">5. 掩码阈值 (分割模型): 调整掩码清晰度 (建议0.25~0.5)。</string>
+    <string name="help_buttons_header">功能按钮</string>
+    <string name="help_buttons_camera">• 视角切换: 切换前/后置摄像头。</string>
+    <string name="help_buttons_filter">• 类别筛选: 选择要检测的类别 (支持搜索)。</string>
+    <string name="help_buttons_tracking_settings">• 跟踪设置: 调整IOU阈值(匹配严格度)、最大寿命(消失后保持帧数)、最小命中(确认所需帧数)。</string>
+    <string name="help_buttons_mask_tracking">• 掩码跟踪 (分割模型): 用掩码辅助跟踪，提高精度 (可关闭)。</string>
+    <!-- Tracking Modes -->
+    <string name="help_tracking_modes_header">跟踪模式说明</string>
+    <string name="help_tracking_mode_stable">• 稳定模式: 适用于相机固定、目标移动较慢或静止的场景，优化跟踪稳定性，减少ID跳变。</string>
+    <string name="help_tracking_mode_handheld">• 手持模式: 针对相机移动优化，启用运动补偿，考虑加速度，适合手持设备拍摄场景。</string>
+    <string name="help_tracking_mode_note">• 其他模式: 系统可能根据场景自动调整或未来添加更多专用模式。</string>
+    <!-- End Tracking Modes -->
+    <string name="help_tracking_tech_header">目标跟踪技术</string>
+    <string name="help_tracking_tech_intro">实时多目标跟踪系统，采用改进OC-SORT思想结合卡尔曼滤波，配合YOLOv8实现高精度、低延迟跟踪。</string>
+    <string name="help_tracking_tech_multi">• 多目标跟踪: 同时跟踪多目标，分配唯一ID，处理遮挡与重现。</string>
+    <string name="help_tracking_tech_perf">• 实时性能: 优化算法，多线程设计，中端设备可达20-30FPS。</string>
+    <string name="help_tracking_tech_algo">• 核心算法: 卡尔曼滤波预测运动，匈牙利/贪婪算法关联，命中/遗失计数处理遮挡。</string>
+    <string name="help_tracking_tech_mask">• 掩码增强跟踪: 利用像素级掩码改进不规则形状和相似目标的跟踪精度。</string>
+    <string name="help_tracking_tech_occlusion">• 遮挡处理: 高级遮挡推理，预测被遮挡轨迹并恢复。</string>
+    <string name="help_tracking_tech_scenarios">• 应用场景: 人流、车辆、运动分析、安防等，适应不同环境。</string>
+    <string name="help_tech_specs_header">技术规格</string>
+    <string name="help_tech_specs_engine">• 检测引擎: NCNN优化的YOLOv8</string>
+    <string name="help_tech_specs_algo">• 跟踪算法: 改进OC-SORT + Kalman Filter</string>
+    <string name="help_tech_specs_datasets">• 数据集: COCO (80类), Open Images V7 (600+类)</string>
+    <string name="help_tech_specs_reqs">• 要求: Android 6.0+, 推荐支持OpenCL/Vulkan</string>
+    <string name="help_author_name">作者：张威</string>
+    <string name="help_author_contact">联系方式：zweicumt@163.com</string>
+    <string name="help_language_switch">CN</string>
+    <string name="help_close_button">关闭</string>
+</resources>

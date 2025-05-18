@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/tech_background_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/style_param_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="风格 O 参数设置"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/tech_text_primary_dark"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
+
+        <!-- 线条粗细 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="线条粗细"
+            android:textStyle="bold"
+            android:textColor="@color/tech_text_primary_dark"
+            android:paddingTop="8dp" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_line_thickness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:valueFrom="1"
+            android:valueTo="5"
+            android:stepSize="1"
+            android:value="2"
+            app:trackColor="@color/tech_surface_variant_dark"
+            app:trackColorActive="@color/tech_primary_dark"
+            app:thumbColor="@color/tech_primary_dark"
+            app:haloColor="@color/tech_accent_transparent" />
+
+        <TextView
+            android:id="@+id/text_line_thickness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textColor="@color/tech_text_secondary_dark"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- 线条类型 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="线条类型"
+            android:textStyle="bold"
+            android:textColor="@color/tech_text_primary_dark"
+            android:paddingTop="8dp" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_line_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_line_solid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实线"
+                android:textColor="@color/tech_text_primary_dark"
+                android:buttonTint="@color/tech_accent_dark"
+                android:checked="true"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/radio_line_dashed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="虚线"
+                android:textColor="@color/tech_text_primary_dark"
+                android:buttonTint="@color/tech_accent_dark"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/radio_line_corner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="角标"
+                android:textColor="@color/tech_text_primary_dark"
+                android:buttonTint="@color/tech_accent_dark"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+        <!-- 框透明度 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="框透明度"
+            android:textStyle="bold"
+            android:textColor="@color/tech_text_primary_dark"
+            android:paddingTop="8dp" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_box_alpha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:valueFrom="0"
+            android:valueTo="1"
+            android:stepSize="0.1"
+            android:value="1"
+            app:trackColor="@color/tech_surface_variant_dark"
+            app:trackColorActive="@color/tech_primary_dark"
+            app:thumbColor="@color/tech_primary_dark"
+            app:haloColor="@color/tech_accent_transparent" />
+
+        <TextView
+            android:id="@+id/text_box_alpha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.0"
+            android:textColor="@color/tech_text_secondary_dark"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- 字体大小 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="字体大小"
+            android:textStyle="bold"
+            android:textColor="@color/tech_text_primary_dark"
+            android:paddingTop="8dp" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_font_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:valueFrom="0.4"
+            android:valueTo="1.0"
+            android:stepSize="0.05"
+            android:value="0.65"
+            app:trackColor="@color/tech_surface_variant_dark"
+            app:trackColorActive="@color/tech_primary_dark"
+            app:thumbColor="@color/tech_primary_dark"
+            app:haloColor="@color/tech_accent_transparent" />
+
+        <TextView
+            android:id="@+id/text_font_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.95"
+            android:textColor="@color/tech_text_secondary_dark"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- 文字风格预设 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="文字风格"
+            android:textStyle="bold"
+            android:textColor="@color/tech_text_primary_dark"
+            android:paddingTop="8dp" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_text_style_tech"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="科技风格"
+                android:textColor="@color/tech_text_primary_dark"
+                android:buttonTint="@color/tech_accent_dark"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radio_text_style_future"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="未来风格 "
+                android:textColor="@color/tech_text_primary_dark"
+                android:buttonTint="@color/tech_accent_dark" />
+
+            <RadioButton
+                android:id="@+id/radio_text_style_neon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="霓虹风格"
+                android:textColor="@color/tech_text_primary_dark"
+                android:buttonTint="@color/tech_accent_dark" />
+
+            <RadioButton
+                android:id="@+id/radio_text_style_military"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="军事风格"
+                android:textColor="@color/tech_text_primary_dark"
+                android:buttonTint="@color/tech_accent_dark" />
+
+            <RadioButton
+                android:id="@+id/radio_text_style_minimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="简约风格"
+                android:textColor="@color/tech_text_primary_dark"
+                android:buttonTint="@color/tech_accent_dark" />
+        </RadioGroup>
+
+        <!-- 掩码透明度 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="掩码透明度"
+            android:textStyle="bold"
+            android:textColor="@color/tech_text_primary_dark"
+            android:paddingTop="8dp" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_mask_alpha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:valueFrom="0"
+            android:valueTo="1"
+            android:stepSize="0.1"
+            android:value="0.5"
+            app:trackColor="@color/tech_surface_variant_dark"
+            app:trackColorActive="@color/tech_primary_dark"
+            app:thumbColor="@color/tech_primary_dark"
+            app:haloColor="@color/tech_accent_transparent" />
+
+        <TextView
+            android:id="@+id/text_mask_alpha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.5"
+            android:textColor="@color/tech_text_secondary_dark"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- 掩码对比度 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="掩码对比度"
+            android:textStyle="bold"
+            android:textColor="@color/tech_text_primary_dark"
+            android:paddingTop="8dp" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_mask_contrast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:valueFrom="0.5"
+            android:valueTo="2.0"
+            android:stepSize="0.1"
+            android:value="1.0"
+            app:trackColor="@color/tech_surface_variant_dark"
+            app:trackColorActive="@color/tech_primary_dark"
+            app:thumbColor="@color/tech_primary_dark"
+            app:haloColor="@color/tech_accent_transparent" />
+
+        <TextView
+            android:id="@+id/text_mask_contrast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.0"
+            android:textColor="@color/tech_text_secondary_dark"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- 新增：掩码边缘参数设置 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="掩码边缘设置"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/tech_text_primary_dark"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <!-- 掩码边缘粗细 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="边缘线粗细"
+            android:textStyle="bold"
+            android:textColor="@color/tech_text_primary_dark"
+            android:paddingTop="8dp" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_mask_edge_thickness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:valueFrom="1"
+            android:valueTo="5"
+            android:stepSize="1"
+            android:value="1"
+            app:trackColor="@color/tech_surface_variant_dark"
+            app:trackColorActive="@color/tech_primary_dark"
+            app:thumbColor="@color/tech_primary_dark"
+            app:haloColor="@color/tech_accent_transparent" />
+
+        <TextView
+            android:id="@+id/text_mask_edge_thickness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/tech_text_secondary_dark"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- 掩码边缘线型 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="边缘线类型"
+            android:textStyle="bold"
+            android:textColor="@color/tech_text_primary_dark"
+            android:paddingTop="8dp" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_mask_edge_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_mask_edge_solid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实线"
+                android:textColor="@color/tech_text_primary_dark"
+                android:buttonTint="@color/tech_accent_dark"
+                android:checked="true"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/radio_mask_edge_dashed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="虚线"
+                android:textColor="@color/tech_text_primary_dark"
+                android:buttonTint="@color/tech_accent_dark"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/radio_mask_edge_dotted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点线"
+                android:textColor="@color/tech_text_primary_dark"
+                android:buttonTint="@color/tech_accent_dark"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+        <!-- 掩码边缘颜色 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="边缘线颜色"
+            android:textStyle="bold"
+            android:textColor="@color/tech_text_primary_dark"
+            android:paddingTop="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_mask_edge_color"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:text="选择边缘线颜色"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/tech_primary_dark"
+            app:cornerRadius="8dp" />
+
+        <!-- 确定和重置按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_reset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="重置"
+                android:textColor="@color/tech_text_primary_dark"
+                app:backgroundTint="@color/tech_surface_dark"
+                app:strokeColor="@color/tech_accent_dark"
+                app:strokeWidth="1dp"
+                app:cornerRadius="8dp"
+                android:layout_marginEnd="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_apply"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="应用"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/tech_accent_dark"
+                app:cornerRadius="8dp"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView> 

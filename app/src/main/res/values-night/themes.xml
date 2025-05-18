@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.OCSort" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Tech theme night implementation - already dark by default -->
+    <style name="Theme.OCSort.Tech" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/tech_primary_dark</item>
+        <item name="colorPrimaryVariant">@color/tech_primary_dark_variant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/tech_secondary_dark</item>
+        <item name="colorSecondaryVariant">@color/tech_secondary_dark_variant</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/tech_background_dark</item>
+        <item name="colorSurface">@color/tech_surface_dark</item>
+        <item name="colorOnSurface">@color/tech_on_surface_dark</item>
+        <item name="colorError">@color/tech_error_dark</item>
+        <!-- Status bar and navigation bar -->
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/tech_text_primary_dark</item>
+        <item name="android:textColorSecondary">@color/tech_text_secondary_dark</item>
+        <item name="android:textColorHint">@color/tech_text_hint_dark</item>
+        <!-- Component styles remain the same, inheriting from the main theme -->
+    </style>
+</resources> 

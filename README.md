@@ -20,9 +20,6 @@
 <b>📱 Download:</b> <a href="https://github.com/dmwzw/AICV-Mobile/releases/tag/AI">AICV-Mobile-V1.0 (Pre-release)</a>
 </div>
 
-<p align="center">
-  <img src="https://github.com/dmwzw/AICV-Mobile/raw/main/app/demo/banner.jpg" alt="AICV-Mobile Banner" width="800"/>
-</p>
 
 <div align="center">
 <h3>📊 Real-time Performance | 🔍 Precise Detection | 🎯 Object Tracking | 📱 Mobile Optimized</h3>

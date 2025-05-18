@@ -202,7 +202,6 @@
   <img src="https://github.com/dmwzw/AICV-Mobile/raw/main/app/demo/tracking_mechanism.png" alt="跟踪机理" width="600"/>
 </div>
 
-### <img src="https://img.shields.io/badge/-目标跟踪机理-01A9DB?style=flat-square&logoColor=white"/> 
 
 > 本项目采用改进版的OC-SORT (Observation-Centric SORT) 思想，并结合卡尔曼滤波器 (Kalman Filter) 进行目标跟踪，以提高精度和鲁棒性：
 
